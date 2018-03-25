@@ -40,6 +40,21 @@ h1,h2,h3,h4,p,ul {
     }
   }
 }
+
+.btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 8px;
+  padding: 0 25px;
+
+  text-decoration: none;
+  &--green {
+    background-color: @green;
+    color:@white;
+  }
+
+}
 .section {
   padding: 90px 0;
   background-color: @white;
@@ -177,7 +192,7 @@ h1,h2,h3,h4,p,ul {
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
-  
+
   &__city {
     display: inline-block;
     position: relative;
@@ -309,13 +324,19 @@ h1,h2,h3,h4,p,ul {
   justify-content: flex-end;
   align-items: center;
   align-content: center;
+    
+  overflow: hidden;
+  
 
-  padding: 0 15px;
   &__item {
     position: relative;
     display: inline-block;
     padding-right: 25px;
     margin-right: 25px;
+
+    height: 40px;
+    line-height: 40px;
+
     &:after {
       content: '|';
       position: absolute;
@@ -337,32 +358,49 @@ h1,h2,h3,h4,p,ul {
   }
 
   &__link {
+    display: block;
     position: relative;
     font-size: 14px;
     font-weight: 200;
     color:@text;
     text-decoration: none;
+    
+    height: 40px;
+    line-height: 40px;
+  }
+}
 
-    &--cart {
-      padding-left: 30px;
-      &:before {
-        content: '';
-        position: absolute;
-        
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-image: url('../img/icon-cart.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        margin:auto;
+.cart {
+  &__toggler {
+    padding-right: 15px;
+    padding-left: 45px;
+    margin-left: -15px;
 
-        cursor: pointer;
-      }
+    &:before {
+      content: '';
+      position: absolute;
+      
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url('../img/icon-cart-white.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 15px;
+      bottom: 0;
+      top: 0;
+      margin:auto;
+
+      cursor: pointer;
+
+
     }
+    &--active {
+      background-color: @green;
+      color:@white;
+    }
+
+    
   }
 }
 
