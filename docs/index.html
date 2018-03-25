@@ -12,16 +12,27 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="header__stripe"></div>
+    <div class="header__container container">
       <a class="header__item header__item--logo" title="Finstore" href="/"></a>
       <div class="header__item header__item--links">
-        <a href="#" class="link link--header">Акции</a>
-        <a href="#" class="link link--header">Доставка и оплата</a>
-        <a href="#" class="link link--header">Партнерам</a>
+        <a href="#" class="link header__link header__link--sale">Акции</a>
+        <a href="#" class="link header__link header__link--truck">Доставка и оплата</a>
+        <a href="#" class="link header__link header__link--partners">Партнерам</a>
       </div>
       <div class="header__item header__item--about">
         Санкт-Петербург   |   8 (812) 867-23-23
       </div>
+    </div>
+    <div class="header__container container">
+      <div class="header__item">Каталог товаров</div>
+      <div class="header__item">
+        <div class="search">
+          <input type="text" class="search__input" placeholder="Поиск товара по названию">
+          <a href="#" class="search__btn"></a>
+        </div>
+      </div>
+      <div class="header__item"></div>
     </div>
   </header>
 
@@ -42,41 +53,86 @@
     <section class="section section--categories">
       <div class="container">
         <div class="categories">
-          <div class="category">
-            <p class="category__title">Продукты</p>
-            <p class="category__desc">Cыры, йогурты, мясо, рыба, молоко, орехи, консервы, масло, приправы, варенье </p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">Продукты</p>
+              <p class="category__desc">Cыры, йогурты, мясо, рыба, молоко, орехи, консервы, масло, приправы, варенье </p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-cheese.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">ЧАЙ, КОФЕ, КАКАО</p>
-            <p class="category__desc">Пакетированный, листовой чай. Кофе зерновой, молотый</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">ЧАЙ, КОФЕ, КАКАО</p>
+              <p class="category__desc">Пакетированный, листовой чай. Кофе зерновой, молотый</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-tea.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">ЛИЧНАЯ ГИГИЕНА</p>
-            <p class="category__desc">Шампуни, мыло, зубные пасты, средства для бритья</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">ЛИЧНАЯ ГИГИЕНА</p>
+              <p class="category__desc">Шампуни, мыло, зубные пасты, средства для бритья</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-cosmetics.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">БЫТОВАЯ ХИМИЯ</p>
-            <p class="category__desc">Средства для мытья посуды, стиральные порошки, отвежители</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">БЫТОВАЯ ХИМИЯ</p>
+              <p class="category__desc">Средства для мытья посуды, стиральные порошки, отвежители</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-chemical.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">КОНДИТЕРСКИЕ ИЗДЕЛИЯ</p>
-            <p class="category__desc">Шоколад, мармелад, печенье, вафли, пирожные, торты</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">КОНДИТЕРСКИЕ ИЗДЕЛИЯ</p>
+              <p class="category__desc">Шоколад, мармелад, печенье, вафли, пирожные, торты</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-candy.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">ВИТАМИНЫ И БАДЫ</p>
-            <p class="category__desc">Аминокислоты, гейнеры, протеин, минералы</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">ВИТАМИНЫ И БАДЫ</p>
+              <p class="category__desc">Аминокислоты, гейнеры, протеин, минералы</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-drugs.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">ТОВАРЫ ДЛЯ ЖИВОТНЫХ</p>
-            <p class="category__desc">Кормы для собак и кошек, щампуни, ошейники, игрушки</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">ТОВАРЫ ДЛЯ ЖИВОТНЫХ</p>
+              <p class="category__desc">Кормы для собак и кошек, щампуни, ошейники, игрушки</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-puppy.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">ОДЕЖДА, ОБУВЬ</p>
-            <p class="category__desc">Верхняя одежда, футболки, куртки, джинсы, кроссовки</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">ОДЕЖДА, ОБУВЬ</p>
+              <p class="category__desc">Верхняя одежда, футболки, куртки, джинсы, кроссовки</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-clothes.png" alt="" class="img--responsive">
+            </div>
           </div>
-          <div class="category">
-            <p class="category__title">ТЕХНИКА</p>
-            <p class="category__desc">Мелкая бытовая техника, электроника, смартфоны, плейеры, наушники, принтеры</p>
+          <div class="categories__item category">
+            <div class="category__info">
+              <p class="category__title">ТЕХНИКА</p>
+              <p class="category__desc">Мелкая бытовая техника, электроника, смартфоны, плейеры, наушники, принтеры</p>
+            </div>
+            <div class="category__img">
+              <img src="./img/category-electro.png" alt="" class="img--responsive">
+            </div>
           </div>
         </div>
       </div>
@@ -85,9 +141,9 @@
       <div class="container">
         <h2 class="section__title">Товары по акции</h2>
         <div class="products">
-          <div class="product">
+          <div class="products__item product product--sale">
             <div class="product__image">
-              <img src="./img/product-1.png" alt="" class="img img--responsive">
+              <img src="./img/product-1.png" alt="" class="img img--auto">
             </div>
             <div class="product__desc">
               <p class="product__title">Авокадо</p>
@@ -95,9 +151,9 @@
               <a href="" class="product__cart"></a>
             </div>
           </div>
-          <div class="product">
+          <div class="products__item product product--sale">
             <div class="product__image">
-              <img src="./img/product-2.png" alt="" class="img img--responsive">
+              <img src="./img/product-2.png" alt="" class="img img--auto">
             </div>
             <div class="product__desc">
               <p class="product__title">Йогурт с клубникой</p>
@@ -105,9 +161,9 @@
               <a href="" class="product__cart"></a>
             </div>
           </div>
-          <div class="product">
+          <div class="products__item product product--sale">
             <div class="product__image">
-              <img src="./img/product-3.png" alt="" class="img img--responsive">
+              <img src="./img/product-3.png" alt="" class="img img--auto">
             </div>
             <div class="product__desc">
               <p class="product__title">Печенье с клюквой и шоколадом</p>
@@ -121,6 +177,56 @@
     <section class="section">
       <div class="container">
         <h2 class="section__title">Последние новинки</h2>
+        <div class="products">
+          <div class="products__item product product--new">
+            <div class="product__image">
+              <img src="./img/product-4.png" alt="" class="img img--auto">
+            </div>
+            <div class="product__desc">
+              <p class="product__title">Сок апельсиновый</p>
+              <p class="product__price">74,60 Р.</p>
+              <a href="" class="product__cart"></a>
+            </div>
+          </div>
+          <div class="products__item product product--new">
+            <div class="product__image">
+              <img src="./img/product-5.png" alt="" class="img img--auto">
+            </div>
+            <div class="product__desc">
+              <p class="product__title">Сок апельсиновый</p>
+              <p class="product__price">55,50 Р.</p>
+              <a href="" class="product__cart"></a>
+            </div>
+          </div>
+          <div class="products__item product product--new">
+            <div class="product__image">
+              <img src="./img/product-6.png" alt="" class="img img--auto">
+            </div>
+            <div class="product__desc">
+              <p class="product__title">Маслины.и оливки</p>
+              <p class="product__price">125,00 Р.</p>
+              <a href="" class="product__cart"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="advantages">
+          <div class="advantages__item">Преимущество в две строки первое, второе и третье</div>
+          <div class="advantages__item">Преимущество в две строки первое, второе и третье</div>
+          <div class="advantages__item">Преимущество в две строки первое, второе и третье</div>
+        </div>
+
+        <div class="about">
+          <div class="about__info">
+            <h2 class="about__title">О магазине</h2>
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p class="about__text">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          </div>
+          <div class="about__img">
+            <img src="./img/about.png" alt="О магазине" class="img img--auto">
+          </div>
+          
+        </div>
       </div>
     </section>
   </div>
