@@ -1,6 +1,19 @@
 $(function (){
   console.log('init');
 
+  $(window).scroll(function(){
+    var header = $('.header'),
+        main = $('.main'),
+        scroll = $(window).scrollTop();
+    if (scroll >= 300) {
+      header.addClass('header--fixed');
+      main.addClass('main--fixed');
+    } else {
+      header.removeClass('header--fixed');
+      main.removeClass('main--fixed');
+    }
+  });
+  
   $('.cart__toggler').click(function(e){
     $(this).toggleClass('cart__toggler--active');
     $('.toolbar').toggleClass('toolbar--active');

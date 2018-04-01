@@ -11,77 +11,7 @@
   <link rel="stylesheet" href="./css/bundle.css">
 </head>
 <body>
-  <header class="header">
-    <div class="header__stripe"></div>
-    <div class="header__container container">
-      <a class="header__item header__item--logo" title="Finstore" href="/"></a>
-      <div class="header__item header__item--links">
-        <a href="#" class="link header__link header__link--sale">Акции</a>
-        <a href="#" class="link header__link header__link--truck">Доставка и оплата</a>
-        <a href="#" class="link header__link header__link--partners">Партнерам</a>
-      </div>
-      <div class="header__item header__item--about header-about">
-        <span class="header-about__city">Санкт-Петербург</span>
-        <a href="tel:88128672323" class="link link--phone header-about__phone"><span>8 (812)</span> 867-23-23</a>
-      </div>
-    </div>
-    <div class="header__container container">
-      <div class="header__item header__item--nav">
-        <nav class="nav">
-          <a href="#" class="nav__toggler">Каталог товаров</a>
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Продукты</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Чай, кофей</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Личная гигиена</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Бытовая химия</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Кондитерские изделия</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Витамины и БАДы</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Товары для животных</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Одежда и обувь</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Техника</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Автотовары</a></li>
-          </ul>
-        </nav>
-        
-      </div>
-      <div class="header__item header__item--search">
-        <div class="search">
-          <input type="text" class="search__input" placeholder="Поиск товара по названию">
-          <a href="#" class="search__btn"></a>
-        </div>
-      </div>
-      <div class="header__item header__item--toolbar">
-        <ul class="toolbar">
-          <li class="toolbar__title">Ваша корзина</li>
-          <li class="toolbar__item"><a href="#" class="toolbar__link">О нас</a></li>
-          <li class="toolbar__item"><a href="#" class="toolbar__link">Войти</a></li>
-          <li class="toolbar__item toolbar__item--cart"><a href="#" class="toolbar__link cart__toggler">2 товара</a></li>
-        </ul>
-        <div class="cart">
-          <div class="cart__products baron baron__root baron__clipper _simple">
-            <div class="baron__scroller">
-              @@include('_html/_cart_row.html')
-              @@include('_html/_cart_row.html')
-              @@include('_html/_cart_row.html')
-              @@include('_html/_cart_row.html')
-            </div>
-            <div class="baron__track">
-              <div class="baron__control baron__up">▲</div>
-              <div class="baron__free">
-                  <div class="baron__bar"></div>
-              </div>
-              <div class="baron__control baron__down">▼</div>
-            </div>
-          </div>
-          <div class="cart__buttons">
-            <a href="#" class="link link--gray cart__button">Продолжить покупки</a>
-            <a href="#" class="btn btn--green cart__button">Оформить заказ</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
+  @@include('_html/_header.html')
   <div class="main">
     <section class="section section--slider">
       <ul class="slider">
@@ -100,7 +30,7 @@
     <section class="section section--categories">
       <div class="container">
         <div class="categories">
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">Продукты</p>
               <p class="category__desc">Cыры, йогурты, мясо, рыба, молоко, орехи, консервы, масло, приправы, варенье </p>
@@ -109,7 +39,7 @@
               <img src="./img/category-cheese.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">ЧАЙ, КОФЕ, КАКАО</p>
               <p class="category__desc">Пакетированный, листовой чай. Кофе зерновой, молотый</p>
@@ -118,7 +48,7 @@
               <img src="./img/category-tea.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">ЛИЧНАЯ ГИГИЕНА</p>
               <p class="category__desc">Шампуни, мыло, зубные пасты, средства для бритья</p>
@@ -127,7 +57,7 @@
               <img src="./img/category-cosmetics.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">БЫТОВАЯ ХИМИЯ</p>
               <p class="category__desc">Средства для мытья посуды, стиральные порошки, отвежители</p>
@@ -136,7 +66,7 @@
               <img src="./img/category-chemical.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">КОНДИТЕРСКИЕ ИЗДЕЛИЯ</p>
               <p class="category__desc">Шоколад, мармелад, печенье, вафли, пирожные, торты</p>
@@ -145,7 +75,7 @@
               <img src="./img/category-candy.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">ВИТАМИНЫ И БАДЫ</p>
               <p class="category__desc">Аминокислоты, гейнеры, протеин, минералы</p>
@@ -154,7 +84,7 @@
               <img src="./img/category-drugs.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">ТОВАРЫ ДЛЯ ЖИВОТНЫХ</p>
               <p class="category__desc">Кормы для собак и кошек, щампуни, ошейники, игрушки</p>
@@ -163,7 +93,7 @@
               <img src="./img/category-puppy.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">ОДЕЖДА, ОБУВЬ</p>
               <p class="category__desc">Верхняя одежда, футболки, куртки, джинсы, кроссовки</p>
@@ -172,7 +102,7 @@
               <img src="./img/category-clothes.png" alt="" class="img--responsive">
             </div>
           </a>
-          <a href="#" title="Категория" class="categories__item category">
+          <a href="category.html" title="Категория" class="categories__item category">
             <div class="category__info">
               <p class="category__title">ТЕХНИКА</p>
               <p class="category__desc">Мелкая бытовая техника, электроника, смартфоны, плейеры, наушники, принтеры</p>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finstore</title>
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/bundle.css">
+</head>
+<body>
+  @@include('_html/_header.html')
+  <div class="main">
+    <div class="section section section--params">
+      <div class="container container--flex">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link breadcrumbs__link--home" href="/" title="Главная">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/" title="Каталог">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">Продукты</li>
+        </ul>
+        <div class="sort">Сортировать по: новизне</div>
+      </div>
+    </div>
+    <section class="section section--catalog">
+      <div class="container container--flex">
+        <aside class="aside">
+          <nav class="aside__nav menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#" class="menu__link">Продукты</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Чай, кофе</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Личная гигиена</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Бытовая химимя</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Кондитерские изделия</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Витамины и БАДы</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Товыры для животных</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Одежда и обувь</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Техника</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Автотовары</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="catalog">
+          <div class="catalog__products">
+            <div class="catalog__item product product--sale">
+              <a href="product.html" class="product__image">
+                <img src="./img/product-1.png" alt="" class="img img--auto">
+              </a>
+              <div class="product__desc">
+                <p class="product__title">Авокадо</p>
+                <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                <a href="" class="product__cart"></a>
+              </div>
+            </div>
+            <div class="catalog__item product product--new">
+              <a href="product.html" class="product__image">
+                <img src="./img/product-2.png" alt="" class="img img--auto">
+              </a>
+              <div class="product__desc">
+                <p class="product__title">Авокадо</p>
+                <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                <a href="" class="product__cart"></a>
+              </div>
+            </div>
+            <div class="catalog__item product product--sale">
+              <a href="product.html" class="product__image">
+                <img src="./img/product-3.png" alt="" class="img img--auto">
+              </a>
+              <div class="product__desc">
+                <p class="product__title">Авокадо</p>
+                <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                <a href="" class="product__cart"></a>
+              </div>
+            </div>
+            <div class="catalog__item product product--sale">
+              <a href="product.html" class="product__image">
+                <img src="./img/product-4.png" alt="" class="img img--auto">
+              </a>
+              <div class="product__desc">
+                <p class="product__title">Авокадо</p>
+                <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                <a href="" class="product__cart"></a>
+              </div>
+            </div>
+            <div class="catalog__item product product--new">
+              <a href="product.html" class="product__image">
+                <img src="./img/product-5.png" alt="" class="img img--auto">
+              </a>
+              <div class="product__desc">
+                <p class="product__title">Авокадо</p>
+                <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                <a href="" class="product__cart"></a>
+              </div>
+            </div>
+            <div class="catalog__item product product--sale">
+              <a href="product.html" class="product__image">
+                <img src="./img/product-6.png" alt="" class="img img--auto">
+              </a>
+              <div class="product__desc">
+                <p class="product__title">Авокадо</p>
+                <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                <a href="" class="product__cart"></a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="catalog__more">Показать еще 12 товаров <span>(всего 124)</span></a>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="section">
+      <div class="container">
+        <div class="about">
+          <div class="about__info">
+            <h2 class="about__title">О магазине</h2>
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p class="about__text">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          </div>
+          <div class="about__img">
+            <img src="./img/about.png" alt="О магазине" class="img img--auto">
+          </div>
+          
+        </div>
+        <h2 class="section__title">Всегда на ★★★★★</h2>
+        <div class="reviews">
+          <div class="reviews__item review">
+            <div class="review__photo">
+              <img src="./img/review-1.png" alt="Отзыв" class="img img--responsive">
+            </div>
+            <div class="review__desc">
+              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
+              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
+            </div>
+          </div>
+          <div class="reviews__item review">
+            <div class="review__photo">
+              <img src="./img/review-2.png" alt="Отзыв" class="img img--responsive">
+            </div>
+            <div class="review__desc">
+              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
+              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
+            </div>
+          </div>
+          <div class="reviews__item review">
+            <div class="review__photo">
+              <img src="./img/review-1.png" alt="Отзыв" class="img img--responsive">
+            </div>
+            <div class="review__desc">
+              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
+              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
+            </div>
+          </div>
+          <div class="reviews__item review">
+            <div class="review__photo">
+              <img src="./img/review-2.png" alt="Отзыв" class="img img--responsive">
+            </div>
+            <div class="review__desc">
+              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
+              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <footer class="footer">
+
+  </footer>
+  <script type="text/javascript" src="./js/libs.min.js"></script>
+  <script type="text/javascript" src="./js/bundle.js"></script>
+</body>
+</html>

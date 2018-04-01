@@ -1,0 +1,69 @@
+<header class="header">
+  <div class="header__stripe"></div>
+  <div class="header__container header__container--fixed container">
+    <a class="header__item header__item--logo" title="Finstore" href="/"></a>
+    <div class="header__item header__item--links">
+      <a href="#" class="link header__link header__link--sale">Акции</a>
+      <a href="#" class="link header__link header__link--truck">Доставка и оплата</a>
+      <a href="#" class="link header__link header__link--partners">Партнерам</a>
+    </div>
+    <div class="header__item header__item--about header-about">
+      <span class="header-about__city">Санкт-Петербург</span><a href="tel:88128672323" class="link link--phone header-about__phone"><span>8 (812)</span> 867-23-23</a>
+    </div>
+  </div>
+  <div class="header__container  container">
+    <div class="header__item header__item--nav">
+      <nav class="nav">
+        <a href="#" class="nav__toggler">Каталог товаров</a>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Продукты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Чай, кофей</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Личная гигиена</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Бытовая химия</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Кондитерские изделия</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Витамины и БАДы</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Товары для животных</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Одежда и обувь</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Техника</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Автотовары</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+    <div class="header__item header__item--search">
+      <div class="search">
+        <input type="text" class="search__input" placeholder="Поиск товара по названию">
+        <a href="#" class="search__btn"></a>
+      </div>
+    </div>
+    <div class="header__item header__item--toolbar">
+      <ul class="toolbar">
+        <li class="toolbar__title">Ваша корзина</li>
+        <li class="toolbar__item"><a href="#" class="toolbar__link">О нас</a></li>
+        <li class="toolbar__item"><a href="#" class="toolbar__link">Войти</a></li>
+        <li class="toolbar__item toolbar__item--cart"><a href="#" class="toolbar__link cart__toggler">2 товара</a></li>
+      </ul>
+      <div class="cart">
+        <div class="cart__products baron baron__root baron__clipper _simple">
+          <div class="baron__scroller">
+            @@include('../_html/_cart_row.html')
+            @@include('../_html/_cart_row.html')
+            @@include('../_html/_cart_row.html')
+            @@include('../_html/_cart_row.html')
+          </div>
+          <div class="baron__track">
+            <div class="baron__control baron__up">▲</div>
+            <div class="baron__free">
+                <div class="baron__bar"></div>
+            </div>
+            <div class="baron__control baron__down">▼</div>
+          </div>
+        </div>
+        <div class="cart__buttons">
+          <a href="#" class="link link--gray cart__button">Продолжить покупки</a>
+          <a href="#" class="btn btn--green cart__button">Оформить заказ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
