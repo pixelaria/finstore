@@ -725,10 +725,26 @@ h1,h2,h3,h4,p,ul {
   align-items: stretch;
   align-content: stretch;
 
+  
+  @media @mobiles {
+    display: block;
+  }
+
   &__item {
     width: 31%;
     min-width: 31%;
     margin-bottom: 3.5%;
+
+    @media @mobiles {
+      width: 100%;
+      max-width: 320px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
   }
 }
 
@@ -967,8 +983,6 @@ h1,h2,h3,h4,p,ul {
 
   @media @mobiles {
     display: block;
-    margin-left: -20px;
-    margin-right: -20px;
   }
 
   &__item {
@@ -997,6 +1011,16 @@ h1,h2,h3,h4,p,ul {
       background-repeat: no-repeat;
       background-position: center;
     }
+
+    @media @mobiles {
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -1013,25 +1037,45 @@ h1,h2,h3,h4,p,ul {
   justify-content: space-between;
 
   margin-bottom: 100px;
+    
+  @media @mobiles {
+    display: block;
+    padding: 30px 15px;
+  }
 
   &__info, &__img {
     width: 50%;
+
+    @media @mobiles {
+      width: 100%;
+    }
   }
 
   &__info {
     padding-right: 40px;
+    @media @mobiles {
+      padding-right: 0;
+    }
   }
 
 
   &__img {
     margin-top: -70px;
     margin-bottom: -70px;
+
+    @media @mobiles {
+      display: none;
+    }
   }
 
   &__title {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
+
+    @media @mobiles {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
@@ -1040,6 +1084,20 @@ h1,h2,h3,h4,p,ul {
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__thumb {
+    display: none;
+    margin-right: -30px;
+    margin-left: -30px;
+    margin-bottom: 15px;
+    @media @mobiles {
+      display: block;
+    }
   }
 }
 
@@ -1049,10 +1107,19 @@ h1,h2,h3,h4,p,ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -70px;
+
+  @meia @mobiles {
+    display: block;
+  }
   &__item {
     width: 50%;
     max-width: 500px;
     margin-bottom: 70px;
+
+    @media @mobiles {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -1092,6 +1159,15 @@ h1,h2,h3,h4,p,ul {
     overflow: hidden;
 
     margin-right: 40px;
+
+    @media @mobiles {
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+      margin-right: 15px;
+      border-width: 4px;
+      margin-top: 5px;
+    }
   }
 
 
@@ -1109,6 +1185,10 @@ h1,h2,h3,h4,p,ul {
   
   &__author {
      color: #333333;
+  }
+
+  @media @mobiles {
+    align-items:start;
   }
 }
 
