@@ -56,7 +56,22 @@
         </aside>
         <div class="product-page">
           <div class="product-page__row">
-            <div class="product-page__img"></div>
+            <div class="product-page__img">
+              <ul class="product-page__gallery gallery">
+                <li class="gallery__item" data-thumb="/img/product-1.png" data-src="/img/product-1.png">
+                  <img class="gallery__img" src="/img/product-1.png" />
+                </li>
+                <li class="gallery__item" data-thumb="/img/product-2.png" data-src="/img/product-2.png">
+                  <img class="gallery__img" src="/img/product-2.png" />
+                </li>
+                <li class="gallery__item" data-thumb="/img/product-3.png" data-src="/img/product-3.png">
+                  <img class="gallery__img" src="/img/product-3.png" />
+                </li>
+                <li class="gallery__item" data-thumb="/img/product-5.png" data-src="/img/product-5.png">
+                  <img class="gallery__img" src="/img/product-5.png" />
+                </li>
+              </ul>
+            </div>
             <div class="product-page__desc">
               <h1 class="product-page__title">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята)</h1>
               <div class="product-page__info">
@@ -76,12 +91,15 @@
                 <span>650.50 РУБ.</span>  440.00 РУБ.
               </div>
               <div class="product-page__options">
-                <div class="spinner">
-                  <input class="spinner__input" value="120 шт." type="text">
-                  <div class="spinner__buttons">
-                    <span class="spinner__button spinner__button--up"></span>
-                    <span class="spinner__button spinner__button--down"></span>
-                  </div>
+                <div class="select">
+                  <input type="hidden" class="select__input">
+                  <div class="select__placeholder">Значение</div>
+                  <ul class="select__inner">
+                    <li class="select__item">Значение 1</li>
+                    <li class="select__item">Значение 2</li>
+                    <li class="select__item">Значение 3</li>
+                    <li class="select__item">Значение 4</li>
+                  </ul>
                 </div>
                 <div class="spinner">
                   <input class="spinner__input" value="120 шт." type="text">
