@@ -77,6 +77,12 @@ h1,h2,h3,h4,p,ul {
   padding: 90px 0;
   background-color: @white;
   
+  &__row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+
+  }
 
   &--params {
     padding: 0;
@@ -84,6 +90,10 @@ h1,h2,h3,h4,p,ul {
       border-top: 1px solid #d6d6d6;
       padding-top: 30px;
     }
+  }
+
+  &--about {
+    padding-top: 0;
   }
 
   &--catalog {
@@ -1565,6 +1575,103 @@ h1,h2,h3,h4,p,ul {
 
   }
 }
+
+
+.address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 115px;
+  
+  &__info {
+    width: 50%;
+  }
+  
+  &__map {
+    width: 50%;
+    min-height: 290px;
+    overflow: hidden;
+  }
+
+  &__block {
+    height: 84px;
+    position: relative;
+    padding-left: 130px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+
+    margin-bottom: 20px;
+    
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+  
+
+    @media @mobiles {
+      height: 75px;
+      padding-left: 90px;
+      line-height: 25px;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 84px;
+      height: 84px;
+      left: 0;
+      top: 0;
+      
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      
+      @media @mobiles {
+        height: 75px;
+        width: 75px;
+      }
+    }
+
+
+    &--point {
+      &:before {
+        background-image: url('../img/address-point.png');
+      }
+    }
+
+    &--time {
+      &:before {
+        background-image: url('../img/address-time.png'); 
+      }
+    }
+    &--phone {
+      &:before {
+        background-image: url('../img/address-phone.png');
+      }
+    }
+  }
+
+  &__text, &__title {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  @media @not-desktop {
+    margin-bottom: 30px;
+  }
+}
+
 
 .footer {
   height: 120px;
