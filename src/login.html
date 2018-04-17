@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finstore</title>
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/bundle.css">
+</head>
+<body>
+  @@include('_html/_header.html')
+  <main class="main">
+    <section class="section section section--params">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link breadcrumbs__link--home" href="/" title="Главная">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">Авторизация</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section--order">
+      <div class="container">
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Выгодные предложения</h2>
+        <div class="products">
+          <div class="products__item product product--sale">
+            <div class="product__image">
+              <img src="./img/product-1.png" alt="" class="img img--auto">
+            </div>
+            <div class="product__desc">
+              <p class="product__title">Авокадо</p>
+              <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+              <a href="" class="product__cart"></a>
+            </div>
+          </div>
+          <div class="products__item product product--sale">
+            <div class="product__image">
+              <img src="./img/product-2.png" alt="" class="img img--auto">
+            </div>
+            <div class="product__desc">
+              <p class="product__title">Йогурт с клубникой</p>
+              <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
+              <a href="" class="product__cart"></a>
+            </div>
+          </div>
+          <div class="products__item product product--sale">
+            <div class="product__image">
+              <img src="./img/product-3.png" alt="" class="img img--auto">
+            </div>
+            <div class="product__desc">
+              <p class="product__title">Печенье с клюквой и шоколадом</p>
+              <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
+              <a href="" class="product__cart"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('_html/_footer.html')
+</body>
+</html>
