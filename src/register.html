@@ -23,29 +23,45 @@
         </ul>
       </div>
     </section>
-    <section class="section section--login">
+    <section class="section section--register">
       <div class="container">
-        <h2 class="section__title">Вход в личный кабинет</h2>
-        <div class="login">
-          <div class="login__form">
-            <div class="login__fields">
+        <h2 class="section__title">Регистрация</h2>
+        <div class="register">
+          <div class="register__form">
+            <div class="register__fields">
+              <div class="login__field input-group">
+                <label for="" class="input-group__label">Фамилия, Имя*</label>
+                <input type="text" class="input-group__input">
+              </div>
               <div class="login__field input-group">
                 <label for="" class="input-group__label">Email*</label>
                 <input type="text" class="input-group__input">
               </div>
               <div class="login__field input-group">
+                <label for="" class="input-group__label">Телефон*</label>
+                <input type="password" class="input-group__input im--phone">
+              </div>
+            </div> 
+            <div class="register__fields">
+              <div class="login__field input-group">
                 <label for="" class="input-group__label">Пароль*</label>
                 <input type="password" class="input-group__input">
               </div>
+              <div class="login__field input-group">
+                <label for="" class="input-group__label">Подтверждение*</label>
+                <input type="password" class="input-group__input">
+              </div>
+
+              <div class="register__buttons">
+                <div class="radioblock radioblock--small">
+                  <input type="hidden" class="radioblock__input">
+                  <ul class="radioblock__items">
+                    <li class="radioblock__item">Я прочитал <a class="radioblock__link" href="#" target="_blank">Политика Безопасности</a> и согласен с условиями</li>
+                  </ul>
+                </div>
+                <a href="#" class="btn btn--green">Регистрация</a>
+              </div>
             </div>
-            <div class="login__buttons">
-              <a href="#" class="btn btn--green login__btn">Войти</a>
-              <a href="#" class="link">Забыл пароль</a>
-            </div>
-          </div>
-          <div class="login__info">
-            <p class="login__text">Создание учетной записи поможет покупать быстрее, контролировать состояние заказа, а также просматривать заказы сделанные ранее. Постоянным покупателям мы предлагаем персональное обслуживание.</p>
-            <a href="#" class="btn btn--tr">Зарегистрироваться за 2 минуты</a>
           </div>
         </div>
       </div>
