@@ -22,40 +22,19 @@
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="/" title="Каталог">Каталог</a>
           </li>
-          <li class="breadcrumbs__item">Продукты</li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="category.html" title="Каталог">Продукты</a>
+          </li>
+          <li class="breadcrumbs__item">Средство для мытья посуды Fairy</li>
         </ul>
       </div>
     </div>
     <section class="section section--catalog">
       <div class="container container--flex">
-        <aside class="aside">
-          <nav class="aside__nav menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a href="#" class="menu__link">Продукты</a>
-                <!--
-                <ul class="menu__list menu__list--sub">
-                  <li class="menu__item"><a href="#" class="menu__link">Сыры</a></li>
-                  <li class="menu__item"><a href="#" class="menu__link">Йогурты</a></li>
-                  <li class="menu__item"><a href="#" class="menu__link">Молоко</a></li>
-                  <li class="menu__item"><a href="#" class="menu__link">Масло</a></li>
-                </ul>
-                -->
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link">Чай, кофе</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Личная гигиена</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Бытовая химимя</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Кондитерские изделия</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Витамины и БАДы</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Товыры для животных</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Одежда и обувь</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Техника</a></li>
-              <li class="menu__item"><a href="#" class="menu__link">Автотовары</a></li>
-            </ul>
-          </nav>
-        </aside>
+        @@include('_html/_aside.html')
         <div class="product-page">
           <div class="product-page__row">
+            <h1 class="product-page__title">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята)</h1>
             <div class="product-page__img">
               <ul class="product-page__gallery gallery">
                 <li class="gallery__item" data-thumb="/img/product-1.png" data-src="/img/product-1.png">
@@ -73,7 +52,7 @@
               </ul>
             </div>
             <div class="product-page__desc">
-              <h1 class="product-page__title">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята)</h1>
+              
               <div class="product-page__info">
                 <div class="params">
                   <div class="params__item"><span>Артикул:</span> 1211-01</div>
@@ -84,7 +63,6 @@
               </div>
               <div class="product-page__text">
                 <p>Небольшое описание товара, несколько предложений на один абзац. Небольшое описание товара, несколько предложений на один абзац. Небольшое описание товара, несколько предложений на один абзац. Небольшое описание товара.</p>
-                <p>Небольшое описание товара, несколько предложений на один абзац. Небольшое описание товара, несколько предложений на один абзац. Небольшое описание товара.</p>
               </div>
 
               <div class="product-page__price">
@@ -125,7 +103,7 @@
                     <img src="./img/product-1.png" alt="" class="img img--auto">
                   </a>
                   <div class="product__desc">
-                    <p class="product__title">Авокадо</p>
+                    <a href="product.html" class="product__title">Авокадо</a>
                     <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
                     <a href="" class="product__cart"></a>
                   </div>
@@ -135,7 +113,7 @@
                     <img src="./img/product-2.png" alt="" class="img img--auto">
                   </a>
                   <div class="product__desc">
-                    <p class="product__title">Авокадо</p>
+                    <a href="product.html" class="product__title">Авокадо</a>
                     <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
                     <a href="" class="product__cart"></a>
                   </div>
@@ -145,7 +123,7 @@
                     <img src="./img/product-3.png" alt="" class="img img--auto">
                   </a>
                   <div class="product__desc">
-                    <p class="product__title">Авокадо</p>
+                    <a href="product.html" class="product__title">Авокадо</a>
                     <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
                     <a href="" class="product__cart"></a>
                   </div>
@@ -154,47 +132,7 @@
             </div>
         </div>
       </div>
-      <div class="container">
-        <h2 class="section__title">Всегда на ★★★★★</h2>
-        <div class="reviews">
-          <div class="reviews__item review">
-            <div class="review__photo">
-              <img src="./img/review-1.png" alt="Отзыв" class="img img--responsive">
-            </div>
-            <div class="review__desc">
-              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
-              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
-            </div>
-          </div>
-          <div class="reviews__item review">
-            <div class="review__photo">
-              <img src="./img/review-2.png" alt="Отзыв" class="img img--responsive">
-            </div>
-            <div class="review__desc">
-              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
-              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
-            </div>
-          </div>
-          <div class="reviews__item review">
-            <div class="review__photo">
-              <img src="./img/review-1.png" alt="Отзыв" class="img img--responsive">
-            </div>
-            <div class="review__desc">
-              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
-              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
-            </div>
-          </div>
-          <div class="reviews__item review">
-            <div class="review__photo">
-              <img src="./img/review-2.png" alt="Отзыв" class="img img--responsive">
-            </div>
-            <div class="review__desc">
-              <div class="review__text">«С наслаждением закупаюсь в этом магазине на регулярной основе. Нет слов, вы просто лучшие»</div>
-              <div class="review__author">Синицин Алексей, счастливый покупатель</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      @@include('_html/_reviews.html')    
     </section>
 
   </div>

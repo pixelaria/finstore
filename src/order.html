@@ -29,16 +29,16 @@
           <div class="order__left">
             <div class="order__fields">
               <div class="order__field input-group">
-                <label for="" class="input-group__label">Фамилия, имя*</label>
-                <input type="text" class="input-group__input">
+                <label for="name" class="input-group__label">Фамилия, имя*</label>
+                <input id="name" name="name" type="text" class="input-group__input">
               </div>
               <div class="order__field input-group">
-                <label for="" class="input-group__label">Email*</label>
-                <input type="text" class="input-group__input">
+                <label for="email" class="input-group__label">Email*</label>
+                <input id="email" name="email" type="text" class="input-group__input">
               </div>
               <div class="order__field input-group">
-                <label for="" class="input-group__label">Телефон*</label>
-                <input type="text" class="input-group__input">
+                <label for="phone" class="input-group__label">Телефон*</label>
+                <input id="phone" name="phone" type="text" class="input-group__input im--phone">
               </div>
             </div>
             <div class="order__params">
@@ -46,14 +46,14 @@
                 <input type="hidden" class="radioblock__input">
                 <p class="radioblock__title">Доставка</p>
                 <ul class="radioblock__items">
-                  <li class="radioblock__item">Курьерская доставка</li>
+                  <li class="radioblock__item radioblock__item--active">Курьерская доставка</li>
                   <li class="radioblock__item">Самовывоз из пункта выдачи</li>
                 </ul>
               </div>
               <div class="radioblock">
                 <p class="radioblock__title">Оплата</p>
                 <ul class="radioblock__items">
-                  <li class="radioblock__item">Наличными при получении</li>
+                  <li class="radioblock__item radioblock__item--active">Наличными при получении</li>
                   <li class="radioblock__item">Банковской картой</li>
                 </ul>
               </div>

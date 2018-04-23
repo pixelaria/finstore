@@ -141,5 +141,28 @@ $(function (){
     });
   }
 
+  $('.im--phone').mask('+7 (000) 000-00-00');
+
+  $('.input--required').change(function(e){
+    $(this).removeClass('input--error');
+    $(this).removeClass('input--success');
+    
+    var val = $(this).val();
+    if ($(this).hasClass('im--phone')) {
+      if (val.length<18)
+        $(this).addClass('input--error');
+      else {
+        $(this).addClass('input--success');
+      }
+    } else {
+      if (val=='') {
+        $(this).addClass('input--error');
+      } else {
+        $(this).addClass('input--success');
+      } 
+    }
+    
+  });
+
 
 });
