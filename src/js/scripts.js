@@ -63,16 +63,18 @@ $(function (){
   $.each($('.products-slider__products'), function() { 
     var $prev = $(this).prev();
     var $next = $(this).next();
+    
     var $slider = $(this).lightSlider({
       item: 4,
       loop: false,
       slideMove: 1,
-      slideMargin: 32,
+      slideMargin: 30,
       easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
       speed: 600,
       pager: false,
       controls: false,
 
+      /*
       responsive : [
         {
           breakpoint:992,
@@ -81,7 +83,16 @@ $(function (){
               slideMove:1,
           }
         },
+        {
+          breakpoint:500,
+          settings: {
+            item:1,
+            slideMove:1,
+            pager: true,
+          }
+        }
       ]
+      */
     });  
 
     $prev.click(function(e){
@@ -91,6 +102,7 @@ $(function (){
     $next.click(function(e){
       $slider.goToNextSlide(); 
     });
+    
   });
 
   $('.gallery').lightSlider({
