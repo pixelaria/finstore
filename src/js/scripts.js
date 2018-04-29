@@ -26,7 +26,9 @@ $(function (){
     $(this).closest('.nav').toggleClass('nav--active');
   });
   
-
+  $('.sidebar-toggler').click(function(){
+    $(this).toggleClass('sidebar-toggler--open');
+  });
   // Init all product sliders
   $.each($('.products-slider__products'), function() { 
     var $prev = $(this).prev();
