@@ -29,6 +29,36 @@ $(function (){
   $('.sidebar-toggler').click(function(){
     $(this).toggleClass('sidebar-toggler--open');
   });
+
+  var blockFixed = document.querySelector('.header');
+  var slideoutBtn = document.querySelector('.sidebar-toggler');
+
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 70,
+    'side': 'left',
+    'tolerance': 70,
+    'touch': false
+
+  });
+
+
+  // Toggle button
+  slideoutBtn.addEventListener('click', function() {
+    slideout.toggle();
+  });
+
+  slideout.on('beforeopen', function () {
+    blockFixed.classList.add('fixed-open');
+  });
+
+  slideout.on('beforeclose', function () {
+    blockFixed.classList.remove('fixed-open');
+  });
+
+
   // Init all product sliders
   $.each($('.products-slider__products'), function() { 
     var $prev = $(this).prev();
