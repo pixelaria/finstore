@@ -49,6 +49,26 @@ h1,h2,h3,h4,p,ul {
   }
 }
 
+
+/* UL, LI, LISTS */
+
+.list {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+  line-height: 30px;
+
+  &__link {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px; 
+    text-decoration: none;
+    
+    transition: color 0.3s ease; 
+  }
+}
+
 .btn {
   display: inline-block;
   height: 40px;
@@ -296,6 +316,10 @@ h1,h2,h3,h4,p,ul {
       @media @tablet {
         content: none;
       }
+    }
+
+    &:hover {
+      color: lighten(@text,10%);
     }
 
     &--sale:before {
@@ -2301,15 +2325,241 @@ h1,h2,h3,h4,p,ul {
     border: 1px solid #e7e7e7;
   }
 }
+
 .footer {
-  height: 120px;
   background-color: @blue-gray;
+  padding: 40px 0;
+  color:@white;
+  
+  @media @mobiles {
+    
+  }
+  &__info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+
+    margin-bottom: 40px;
+    border-bottom: 1px solid @white;
+    padding-bottom: 30px;
+
+    @media @mobiles {
+      display: block;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: row;
+    
+    @media @tablet {
+      justify-content: space-around;
+    }
+    
+    @media @mobiles {
+      margin-bottom: 30px;
+      display: block;
+      padding-bottom: 0;
+    }
+  }
+  &__company {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
+.links {
+  margin-right: 60px;
+    
+  &:last-child {
+    margin-right: 0;
+  }
 
 
+  @media @mobiles {
+    text-align: center;
+    margin-right: 0;
+  }
 
+  &__list {
+    list-style: none;
+  }
+}
 
+.company {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+
+    @media @mobiles {
+      
+    }
+
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right:30px;
+    position: relative;
+    
+    color: @white;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+
+    &:after {
+      content: '|';
+      position: absolute;
+      right: -20px;
+      color: @white;
+    }
+
+    &:last-child  {
+      margin-right: 0;
+      &:after {
+        content: none;
+      }
+    }
+
+    @media @tablet {
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 0;
+      &:after {
+        content: none;
+
+      }
+    }
+
+    @media @mobiles {
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 0;
+      &:after {
+        content: none;
+
+      }
+    }
+  }
+
+  &__phone {
+    color: @white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+      color:@light-green;
+    }
+  }
+  
+
+  @media @tablet {
+    margin-top: 5px;
+    display: block;
+  }
+  
+  
+}
+
+.copyright {
+  color: @text-light-gray;
+  &__links {
+    float: left;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media @mobiles {
+      float: none;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right:30px;
+    position: relative;
+    
+    &:after {
+      content: '|';
+      position: absolute;
+      right: -20px;
+      color: @text-light-gray;
+    }
+
+    &:last-child:after  {
+      content: none;
+    }
+
+    @media @mobiles {
+      text-align: center;
+      display: block;
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__link {
+    color: @text-light-gray;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+      color:@white;
+    }
+
+    transition: color 0.3s ease;
+  }
+
+  &__develop {
+    float: right;
+    @media @mobiles {
+      float: none;
+    }
+  }
+  
+
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+} 
+
+.develop {
+  font-size: 14px;
+  &__text {
+    margin: 0;
+    color: @text-light-gray;
+  }
+  &__link {
+    text-decoration: none !important;
+    color:@white;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    &:hover {
+      color: @light-green;
+    }
+  }
+  @media @mobiles {
+    text-align: center;
+  }
+}
 
 /* baron overrides */
 .baron {

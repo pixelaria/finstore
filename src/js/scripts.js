@@ -15,13 +15,14 @@ $(function (){
   });
   
   $('.cart__toggler').click(function(e){
+    e.preventDefault();
     $(this).toggleClass('cart__toggler--active');
     $('.toolbar').toggleClass('toolbar--active');
     $('.cart').toggleClass('cart--active');
-    
   });
 
   $('.nav__toggler').click(function(e){
+    e.preventDefault();
     $(this).closest('.nav').toggleClass('nav--active');
   });
   
