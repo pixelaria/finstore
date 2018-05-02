@@ -68,7 +68,7 @@ $(function (){
       item: 4,
       loop: false,
       slideMove: 1,
-      slideMargin: 30,
+      slideMargin: 0,
       easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
       speed: 600,
       pager: false,
