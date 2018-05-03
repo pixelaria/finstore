@@ -1135,6 +1135,11 @@ h1,h2,h3,h4,p,ul {
 
   &:hover {
     box-shadow: 0 2px 20px rgba(206, 206, 206, 0.5);
+    
+    .category__img {
+        animation-play-state: running;
+    }
+
   }
 
   &__title {
@@ -1152,16 +1157,42 @@ h1,h2,h3,h4,p,ul {
     line-height: 18px;
   }
 
+
+  
   &__img {
     width: 160px;
     min-width: 120px;
+    height: 100%;
     
     @media @mobiles {
       min-width: 80px;
     }
     
+    animation: play 1.5s steps(16);
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: paused;
+
+    &--cheese {
+      background-image: url('../img/cheese.jpg');
+      background-size: auto 120px;
+      background-position: -200%;
+
+
+    }
   }
+
 }
+
+@keyframes play {
+  from { background-position:    -200%; }
+   to { background-position: -1800%; }
+}
+  
+
+
 
 /*
 .products {
@@ -2863,3 +2894,8 @@ h1,h2,h3,h4,p,ul {
 .lslide {
   padding: 15px;
 }
+
+
+
+
+
