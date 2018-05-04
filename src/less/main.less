@@ -1012,9 +1012,33 @@ h1,h2,h3,h4,p,ul {
     height: 360px;
     position: relative;
     
+    transition: height 0.3s ease;
     @media @mobiles {
       height: 300px;
     }
+    &--closed {
+      height: 80px;
+      
+      @media @mobiles {
+        height: 80px;
+      }
+      .slider__title {
+        font-size: 25px;
+        margin-bottom: 0;
+      }
+      
+      .slider__toggler {
+        &--open {
+          display: block;
+        }
+
+        &--close {
+          display: none;
+        }
+      }
+    }
+   
+
   }
   &__img {
     position: absolute;
@@ -1047,9 +1071,8 @@ h1,h2,h3,h4,p,ul {
     text-transform: uppercase;
     margin-bottom: 30px;
 
-
     font-family: "Impact";
-
+    
     @media @mobiles {
       font-size: 40px;
     }
@@ -1059,6 +1082,30 @@ h1,h2,h3,h4,p,ul {
     font-size: 14px;
     font-weight: 400;
   }
+
+  &__toggler {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    right: 0;
+    top: 30px;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;      
+      fill: @white;
+    }
+
+    &--close {
+      display: block;
+    }
+    &--open {
+      display: none;
+    }
+  }
+  
 }
 
 .categories {
@@ -1118,11 +1165,15 @@ h1,h2,h3,h4,p,ul {
   max-height: 190px;
   text-decoration: none;
 
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
 
   &:hover {
     box-shadow: 0 2px 20px rgba(206, 206, 206, 0.5);
-    
+    transform: scale(1.05);
     .category__img {
         animation-play-state: running;
     }
@@ -1155,8 +1206,8 @@ h1,h2,h3,h4,p,ul {
       min-width: 80px;
     }
     
-    animation: play 1.5s steps(16);
-    animation-delay: 0.3s;
+    animation: play 1.3s steps(16);
+    animation-delay: 0.15s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-direction: normal;

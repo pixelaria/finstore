@@ -30,6 +30,12 @@ $(function (){
     $(this).toggleClass('sidebar-toggler--open');
   });
 
+  $('.slider__toggler').click(function(e){
+    e.preventDefault();
+    $(this).closest('.slider__item').toggleClass('slider__item--closed');
+  });
+
+
   var blockFixed = document.querySelector('.header');
   var slideoutBtn = document.querySelector('.sidebar-toggler');
 
