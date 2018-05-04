@@ -19,7 +19,11 @@ var gulp = require('gulp'),
   cssnano = require('gulp-cssnano'),
   notify = require('gulp-notify'),
   cache = require('gulp-cache'),
-  zip = require('gulp-zip');
+  zip = require('gulp-zip'),
+
+  svgstore = require('gulp-svgstore'),
+  inject = require('gulp-inject'),
+  rename = require('gulp-rename');
 
 // Компиляция LESS
 gulp.task('less', function() { 
@@ -90,6 +94,16 @@ gulp.task('img', function() {
             use: [pngquant()]
         })))
         .pipe(gulp.dest('docs/img')); // Выгружаем на продакшен
+});
+
+// SVG
+gulp.task('svg', function () {
+    return gulp
+        .src('src/svg/**/*.svg', { base: 'src/svg' })
+        .pipe(rename({prefix: 'icon-'}))
+        .pipe(svgstore())
+        .pipe(rename('sprite.svg'))
+        .pipe(gulp.dest('docs/svg'));
 });
 
 // Таск Browser-sync

@@ -8,7 +8,9 @@
     </div>
     <a class="header__item header__item--logo" title="Finstore" href="/"><span>Fin</span>store</a>
     <div class="header__item header__item--links">
-      <a href="#" class="link header__link header__link--sale">Акции</a><a href="#" class="link header__link header__link--truck">Доставка и оплата</a><a href="#" class="link header__link header__link--partners">Партнерам</a>
+      <a href="#" class="link header__link header__link--sale"><svg><use xlink:href="#icon-discount"></use></svg> Акции</a>
+      <a href="#" class="link header__link header__link--truck"><svg><use xlink:href="#icon-delivery-truck"></use></svg> Доставка и оплата</a>
+      <a href="#" class="link header__link header__link--partners"><svg><use xlink:href="#icon-community"></use></svg> Партнерам</a>
     </div>
     <div class="header__item header__item--mobile-links">
       <a href="#" class="link header__link header__link--phone"></a>
@@ -42,7 +44,7 @@
     <div class="header__item header__item--search">
       <div class="search">
         <input type="text" class="search__input" placeholder="Поиск товара">
-        <a href="#" class="search__btn"></a>
+        <a href="#" class="search__btn"><svg><use xlink:href="#icon-search"></use></svg></a>
       </div>
     </div>
     <div class="header__item header__item--toolbar">
@@ -50,9 +52,9 @@
         <li class="toolbar__title">Ваша корзина</li>
         <li class="toolbar__item"><a href="#" class="toolbar__link">О нас</a></li>
         <li class="toolbar__item"><a href="#" class="toolbar__link">Войти</a></li>
-        <li class="toolbar__item toolbar__item--cart"><a href="#" class="toolbar__link cart__toggler">2 товара</a></li>
-      </ul>
-      <div class="cart">
+        <li class="toolbar__item toolbar__item--cart"><a href="#" class="toolbar__link cart__toggler"><svg><use xlink:href="#icon-shopping-cart"></use></svg> 2 товара</a></li>
+        </ul>
+        <div class="cart">
         <div class="cart__products baron baron__root baron__clipper _simple">
           <div class="baron__scroller">
             @@include('../_html/_cart_row.html')
