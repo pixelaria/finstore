@@ -5,7 +5,7 @@ $(function (){
     var header = $('.header'),
         main = $('.main'),
         scroll = $(window).scrollTop();
-    if (scroll >= 300) {
+    if (scroll >= 105) {
       header.addClass('header--fixed');
       main.addClass('main--fixed');
     } else {
@@ -80,7 +80,7 @@ $(function (){
       pager: false,
       controls: false,
 
-      /*
+      
       responsive : [
         {
           breakpoint:992,
@@ -98,7 +98,7 @@ $(function (){
           }
         }
       ]
-      */
+      
     });  
 
     $prev.click(function(e){

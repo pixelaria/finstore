@@ -203,7 +203,6 @@ h1,h2,h3,h4,p,ul {
 }
 .header {
   background-color: @white;
-  top: -100px;
   
   transition: all 0.3s ease;
   will-change: transform;
@@ -225,10 +224,7 @@ h1,h2,h3,h4,p,ul {
       display: none;
     }
 
-    .header__container {
-      padding: 30px 0;
-    }
-
+    
     @media @mobiles {
       .header__container--mobiles {
         display: flex;
@@ -243,7 +239,7 @@ h1,h2,h3,h4,p,ul {
     height: 5px;
   }
   &__container {
-    
+    height: 100px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -251,8 +247,7 @@ h1,h2,h3,h4,p,ul {
     align-items: center;
     align-content: stretch;
     
-    padding-bottom: 40px;
-    padding-top: 40px;
+    
 
     &--fixed {
       padding-bottom: 0;
@@ -388,7 +383,7 @@ h1,h2,h3,h4,p,ul {
     
     svg {
       margin-right: 5px;
-      fill: @text;
+      fill: #858585;
       width: 20px;
       height: 20px;
     }
@@ -661,7 +656,7 @@ h1,h2,h3,h4,p,ul {
     font-weight: 300;
     font-size: 14px;
     & + ul a {
-      padding-left: 15px;
+      padding-left: 25px;
     }
   }
   &__list {
@@ -903,6 +898,7 @@ h1,h2,h3,h4,p,ul {
       width: 20px;
       height: 20px;
       margin-right: 10px;
+      fill: #333333;
     }
     
     &:hover, &--active {
@@ -1073,6 +1069,7 @@ h1,h2,h3,h4,p,ul {
 
     font-family: "Impact";
     
+    transition: font-size 0.3s ease;
     @media @mobiles {
       font-size: 40px;
     }
@@ -1148,8 +1145,6 @@ h1,h2,h3,h4,p,ul {
 }
 
 .category {
-
-
   display: flex;
 
   flex-direction: row;
@@ -1201,12 +1196,19 @@ h1,h2,h3,h4,p,ul {
     width: 160px;
     min-width: 120px;
     height: 100%;
+    min-height: 120px;
     
     @media @mobiles {
+      width: 80px;
+      height: 80px;
       min-width: 80px;
+      min-height: 80px;
+      background-size: auto 80px;
     }
     
-    animation: play 1.3s steps(16);
+    animation-name: play;
+    animation-duration: 1.3s;
+    animation-timing-function: steps(16);
     animation-delay: 0.15s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -1339,6 +1341,10 @@ h1,h2,h3,h4,p,ul {
 
   &__slider {
     width: ~'calc(100% - 120px)';
+    
+    @media @mobiles {
+      width: 100%;
+    }
   }
 
   &__products {
