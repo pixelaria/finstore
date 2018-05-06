@@ -214,110 +214,118 @@
     <section class="section section--order">
       <div class="container">
         <div class="order">
-          <div class="order__left">
-            <div class="order__fields">
-              <div class="order__field input-group">
-                <label for="name" class="input-group__label">Фамилия, имя*</label>
-                <input id="name" name="name" type="text" class="input-group__input">
-              </div>
-              <div class="order__field input-group">
-                <label for="email" class="input-group__label">Email*</label>
-                <input id="email" name="email" type="text" class="input-group__input">
-              </div>
-              <div class="order__field input-group">
-                <label for="phone" class="input-group__label">Телефон*</label>
-                <input id="phone" name="phone" type="text" class="input-group__input im--phone">
+          <div class="order__row">
+            <div class="order__part order__part--right">
+              <div class="order__products">
+                <div class="order__table-row">
+                  <div class="order__cell order__cell--product">
+                    <a href="#" class="cart__product">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята) <span>— 100 г</span></a>
+                  </div>
+                  <div class="order__cell order__cell--img">
+                    <div class="order__img"><img src="./img/product-cart.png" alt="" class="img img--responsive"></div>
+                  </div>
+                  <div class="order__cell">
+                    <div class="spinner">
+                      <input type="text" class="spinner__input" value="120 шт.">
+                      <div class="spinner__buttons">
+                        <span class="spinner__button spinner__button--up"></span>
+                        <span class="spinner__button spinner__button--down"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order__cell">23 350 Р.</div>
+                  <div class="order__cell order__cell--remove">
+                    <div class="order__remove"></div>
+                  </div>
+                </div>
+                <div class="order__table-row">
+                  <div class="order__cell order__cell--product">
+                    <a href="#" class="cart__product">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята) <span>— 100 г</span></a>
+                  </div>
+                  <div class="order__cell order__cell--img">
+                    <div class="order__img"><img src="./img/product-cart.png" alt="" class="img img--responsive"></div>
+                  </div>
+                  
+                  <div class="order__cell">
+                    <div class="spinner">
+                      <input type="text" class="spinner__input" value="120 шт.">
+                      <div class="spinner__buttons">
+                        <span class="spinner__button spinner__button--up"></span>
+                        <span class="spinner__button spinner__button--down"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order__cell">23 350 Р.</div>
+                  <div class="order__cell order__cell--remove">
+                    <div class="order__remove"></div>
+                  </div>
+                </div>
+                <div class="order__table-row">
+                  <div class="order__cell order__cell--product">
+                    <a href="#" class="cart__product">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята) <span>— 100 г</span></a>
+                  </div>
+                  <div class="order__cell order__cell--img">
+                    <div class="order__img"><img src="./img/product-cart.png" alt="" class="img img--responsive"></div>
+                  </div>
+                  
+                  <div class="order__cell">
+                    <div class="spinner">
+                      <input type="text" class="spinner__input" value="120 шт.">
+                      <div class="spinner__buttons">
+                        <span class="spinner__button spinner__button--up"></span>
+                        <span class="spinner__button spinner__button--down"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order__cell">23 350 Р.</div>
+                  <div class="order__cell order__cell--remove">
+                    <div class="order__remove"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="order__params">
-              <div class="radioblock">
-                <input type="hidden" class="radioblock__input">
-                <p class="radioblock__title">Доставка</p>
-                <ul class="radioblock__items">
-                  <li class="radioblock__item radioblock__item--active">Курьерская доставка</li>
-                  <li class="radioblock__item">Самовывоз из пункта выдачи</li>
-                </ul>
+            <div class="order__part order__part--left">
+              <div class="order__fields">
+                <div class="order__field input-group">
+                  <label for="name" class="input-group__label">Фамилия, имя*</label>
+                  <input id="name" name="name" type="text" class="input-group__input">
+                </div>
+                <div class="order__field input-group">
+                  <label for="email" class="input-group__label">Email*</label>
+                  <input id="email" name="email" type="text" class="input-group__input">
+                </div>
+                <div class="order__field input-group">
+                  <label for="phone" class="input-group__label">Телефон*</label>
+                  <input id="phone" name="phone" type="text" class="input-group__input im--phone">
+                </div>
               </div>
-              <div class="radioblock">
-                <p class="radioblock__title">Оплата</p>
-                <ul class="radioblock__items">
-                  <li class="radioblock__item radioblock__item--active">Наличными при получении</li>
-                  <li class="radioblock__item">Банковской картой</li>
-                </ul>
+              <div class="order__params">
+                <div class="radioblock">
+                  <input type="hidden" class="radioblock__input" value="">
+                  <p class="radioblock__title">Доставка</p>
+                  <ul class="radioblock__items">
+                    <li class="radioblock__item radioblock__item--active" data-value="courier">Курьерская доставка</li>
+                    <li class="radioblock__item" data-value="pickup">Самовывоз из пункта выдачи</li>
+                  </ul>
+                </div>
+                <div class="radioblock">
+                  <p class="radioblock__title">Оплата</p>
+                  <ul class="radioblock__items">
+                    <li class="radioblock__item radioblock__item--active" data-value="cash">Наличными при получении</li>
+                    <li class="radioblock__item" data-value="card">Банковской картой</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="order__right">
-            <div class="order__products">
-              <div class="order__row">
-                <div class="order__cell order__cell--img">
-                  <div class="order__img"><img src="./img/product-cart.png" alt="" class="img img--responsive"></div>
-                </div>
-                <div class="order__cell order__cell--product">
-                  <a href="#" class="cart__product">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята) <span>— 100 г</span></a>
-                </div>
-                <div class="order__cell">
-                  <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
-                    <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="order__cell">23 350 Р.</div>
-                <div class="order__cell">
-                  <div class="order__remove"></div>
-                </div>
+          <div class="order__row order__row--end">
+            <div class="order__part order__part--right">
+              <div class="order__buttons">
+                <p class="order__total">
+                  ИТОГО: <span>70 650 Р.</span>
+                </p>
+                <a href="#" class="btn btn--green">Завершить заказ</a>
               </div>
-              <div class="order__row">
-                <div class="order__cell order__cell--img">
-                  <div class="order__img"><img src="./img/product-cart.png" alt="" class="img img--responsive"></div>
-                </div>
-                <div class="order__cell order__cell--product">
-                  <a href="#" class="cart__product">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята) <span>— 100 г</span></a>
-                </div>
-                <div class="order__cell">
-                  <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
-                    <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="order__cell">23 350 Р.</div>
-                <div class="order__cell">
-                  <div class="order__remove"></div>
-                </div>
-              </div>
-              <div class="order__row">
-                <div class="order__cell order__cell--img">
-                  <div class="order__img"><img src="./img/product-cart.png" alt="" class="img img--responsive"></div>
-                </div>
-                <div class="order__cell order__cell--product">
-                  <a href="#" class="cart__product">Средство для мытья посуды Fairy «Нежные руки» (чайное дерево и мята) <span>— 100 г</span></a>
-                </div>
-                <div class="order__cell">
-                  <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
-                    <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="order__cell">23 350 Р.</div>
-                <div class="order__cell">
-                  <div class="order__remove"></div>
-                </div>
-              </div>
-            </div>
-            <div class="order__buttons">
-              <p class="order__total">
-                ИТОГО: <span>70 650 Р.</span>
-              </p>
-              <a href="#" class="btn btn--green">Завершить заказ</a>
             </div>
           </div>
         </div>
@@ -325,65 +333,77 @@
         <h2 class="section__subtitle">Выгодные предложения</h2>
         <div class="products-slider">
             <div class="products-slider__arrow products-slider__arrow--left"></div>
-            <div class="products-slider__products prod1ucts">
+            <div class="products-slider__products products">
               <div class="products__item product product--sale">
-                <div class="product__image">
-                  <img src="./img/product-1.png" alt="" class="img img--auto">
-                </div>
-                <div class="product__desc">
-                  <p class="product__title">Авокадо</p>
-                  <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
-                  <a href="" class="product__cart"></a>
+                <div class="product__inner">
+                  <div class="product__image">
+                    <img src="./img/product-1.png" alt="" class="img img--auto">
+                  </div>
+                  <div class="product__desc">
+                    <p class="product__title">Авокадо</p>
+                    <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                    <a href="" class="product__cart"></a>
+                  </div>
                 </div>
               </div>
               <div class="products__item product product--sale">
-                <div class="product__image">
-                  <img src="./img/product-2.png" alt="" class="img img--auto">
-                </div>
-                <div class="product__desc">
-                  <p class="product__title">Йогурт с клубникой</p>
-                  <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
-                  <a href="" class="product__cart"></a>
-                </div>
-              </div>
-              <div class="products__item product product--sale">
-                <div class="product__image">
-                  <img src="./img/product-3.png" alt="" class="img img--auto">
-                </div>
-                <div class="product__desc">
-                  <p class="product__title">Печенье с клюквой и шоколадом</p>
-                  <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
-                  <a href="" class="product__cart"></a>
+                <div class="product__inner">
+                  <div class="product__image">
+                    <img src="./img/product-2.png" alt="" class="img img--auto">
+                  </div>
+                  <div class="product__desc">
+                    <p class="product__title">Йогурт с клубникой</p>
+                    <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
+                    <a href="" class="product__cart"></a>
+                  </div>
                 </div>
               </div>
               <div class="products__item product product--sale">
-                <div class="product__image">
-                  <img src="./img/product-1.png" alt="" class="img img--auto">
-                </div>
-                <div class="product__desc">
-                  <p class="product__title">Авокадо</p>
-                  <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
-                  <a href="" class="product__cart"></a>
-                </div>
-              </div>
-              <div class="products__item product product--sale">
-                <div class="product__image">
-                  <img src="./img/product-2.png" alt="" class="img img--auto">
-                </div>
-                <div class="product__desc">
-                  <p class="product__title">Йогурт с клубникой</p>
-                  <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
-                  <a href="" class="product__cart"></a>
+                <div class="product__inner">
+                  <div class="product__image">
+                    <img src="./img/product-3.png" alt="" class="img img--auto">
+                  </div>
+                  <div class="product__desc">
+                    <p class="product__title">Печенье с клюквой и шоколадом</p>
+                    <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
+                    <a href="" class="product__cart"></a>
+                  </div>
                 </div>
               </div>
               <div class="products__item product product--sale">
-                <div class="product__image">
-                  <img src="./img/product-3.png" alt="" class="img img--auto">
+                <div class="product__inner">
+                  <div class="product__image">
+                    <img src="./img/product-1.png" alt="" class="img img--auto">
+                  </div>
+                  <div class="product__desc">
+                    <p class="product__title">Авокадо</p>
+                    <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                    <a href="" class="product__cart"></a>
+                  </div>
                 </div>
-                <div class="product__desc">
-                  <p class="product__title">Печенье с клюквой и шоколадом</p>
-                  <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
-                  <a href="" class="product__cart"></a>
+              </div>
+              <div class="products__item product product--sale">
+                <div class="product__inner">
+                  <div class="product__image">
+                    <img src="./img/product-2.png" alt="" class="img img--auto">
+                  </div>
+                  <div class="product__desc">
+                    <p class="product__title">Йогурт с клубникой</p>
+                    <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
+                    <a href="" class="product__cart"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="products__item product product--sale">
+                <div class="product__inner">
+                  <div class="product__image">
+                    <img src="./img/product-3.png" alt="" class="img img--auto">
+                  </div>
+                  <div class="product__desc">
+                    <p class="product__title">Печенье с клюквой и шоколадом</p>
+                    <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
+                    <a href="" class="product__cart"></a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -24,11 +24,16 @@ $(function (){
   $('.search__toggler').click(function(e){
     e.preventDefault();
     $('.search').toggleClass('search--active');
-    
   });
 
+  $('.radioblock__item').click(function(e){
+    var value = $(this).data('value');
+    var parent = $(this).parent();
+    parent.find('.radioblock__item').removeClass('radioblock__item--active');
+    parent.find('.radioblock__input').val(value);
+    $(this).addClass('radioblock__item--active');
+  });
   
-
   $('.nav__toggler').click(function(e){
     e.preventDefault();
     $(this).closest('.nav').toggleClass('nav--active');
