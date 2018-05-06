@@ -209,7 +209,7 @@ h1,h2,h3,h4,p,ul {
   z-index: 2;
   
   @media @mobiles {
-    height: 70px;
+    height: 75px;
   }
 
   &--fixed {
@@ -246,17 +246,18 @@ h1,h2,h3,h4,p,ul {
     
     align-items: center;
     align-content: stretch;
-    
+    background-color: @white;
     
 
     &--fixed {
+      z-index: 2;
       padding-bottom: 0;
     }
-  
+    
     @media @mobiles {
-      display: none;
+      padding: 0;
+      height: auto;
     }
-
     &--mobiles {
       @media @mobiles {
         padding: 0 15px;
@@ -328,14 +329,24 @@ h1,h2,h3,h4,p,ul {
       width: 100%;
       margin-left: 10px;
       margin-right: 10px;
+
+      @media @mobiles {
+        padding: 0;
+      }
     }
     
     &--toolbar {
       position: relative;
+      @media @mobiles {
+        display: none;
+      }
     }
     &--nav {
       width: 180px;
       min-width: 180px;
+      @media @mobiles {
+        display: none;
+      }
     }
 
     &--about {
@@ -559,17 +570,12 @@ h1,h2,h3,h4,p,ul {
   }
 }
 
-
-
-
-
-
-
-
-
 .main {
   &--fixed {
     margin-top: 205px;
+    @media @mobiles {
+      margin-top: 75px;
+    }
   }
 }
 
@@ -716,6 +722,19 @@ h1,h2,h3,h4,p,ul {
 .search {
   position: relative;
   width: 100%;
+  
+  transition: top 0.3s ease;
+  
+  @media @mobiles {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    
+    &--active {
+      top: 0;
+    }
+  }
+
   &__input {
     width: 100%;
     height: 40px;
@@ -728,6 +747,10 @@ h1,h2,h3,h4,p,ul {
 
     font-size: 14px;
     font-weight: 400;
+
+    @media @mobiles {
+      border-radius: 0;
+    }
   }
 
   &__btn {
@@ -2705,6 +2728,8 @@ h1,h2,h3,h4,p,ul {
 .footer {
   background-color: @blue-gray;
   padding: 40px 0;
+  transition: all 0.3s ease;
+  will-change: transform;
   color:@white;
   
   @media @mobiles {

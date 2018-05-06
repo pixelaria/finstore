@@ -21,6 +21,14 @@ $(function (){
     $('.cart').toggleClass('cart--active');
   });
 
+  $('.search__toggler').click(function(e){
+    e.preventDefault();
+    $('.search').toggleClass('search--active');
+    
+  });
+
+  
+
   $('.nav__toggler').click(function(e){
     e.preventDefault();
     $(this).closest('.nav').toggleClass('nav--active');
@@ -36,7 +44,8 @@ $(function (){
   });
 
 
-  var blockFixed = document.querySelector('.header');
+  var header = document.querySelector('.header');
+  var footer = document.querySelector('.footer');
   var slideoutBtn = document.querySelector('.sidebar-toggler');
 
   var slideout = new Slideout({
@@ -57,11 +66,13 @@ $(function (){
   });
 
   slideout.on('beforeopen', function () {
-    blockFixed.classList.add('fixed-open');
+    header.classList.add('fixed-open');
+    footer.classList.add('fixed-open');
   });
 
   slideout.on('beforeclose', function () {
-    blockFixed.classList.remove('fixed-open');
+    header.classList.remove('fixed-open');
+    footer.classList.remove('fixed-open');
   });
 
 
