@@ -21,6 +21,10 @@ $(function (){
     $('.cart').toggleClass('cart--active');
   });
 
+  $('.product__cart').click(function(e){
+    e.preventDefault();
+  });
+
   $('.search__toggler').click(function(e){
     e.preventDefault();
     $('.search').toggleClass('search--active');
@@ -95,6 +99,7 @@ $(function (){
       speed: 600,
       pager: false,
       controls: false,
+      enableDrag: false,
 
       
       responsive : [
@@ -118,10 +123,12 @@ $(function (){
     });  
 
     $prev.click(function(e){
+      console.log('prev');
       $slider.goToPrevSlide(); 
     });
 
     $next.click(function(e){
+      console.log('next');
       $slider.goToNextSlide(); 
     });
     

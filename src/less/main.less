@@ -18,8 +18,8 @@ body {
 
 svg {
   vertical-align: middle;
-  height: 2rem;
-  width: 2rem;
+  height: 100%;
+  width: 100%;
   fill-rule: "nonzero";
   transition: fill 0.3s ease;
 }
@@ -30,9 +30,6 @@ h1,h2,h3,h4,p,ul {
   padding: 0;
 }
 
-::-webkit-scrollbar { /* for Mac OS X support */
-    width: 0;
-}
 
 .img {
   display: inline-block;
@@ -47,6 +44,7 @@ h1,h2,h3,h4,p,ul {
   text-decoration: none;
   &--phone {
     span {
+      font-weight: 400;
       color:@blue;
     }
   }
@@ -211,6 +209,7 @@ h1,h2,h3,h4,p,ul {
   transition: all 0.3s ease;
   will-change: transform;
   z-index: 2;
+  z-index: 100;
   
   @media @mobiles {
     height: 75px;
@@ -218,7 +217,7 @@ h1,h2,h3,h4,p,ul {
 
   &--fixed {
     position: fixed;
-    z-index: 100;
+    
     top: 0;
     width: 100%;
     padding-bottom: 0;
@@ -274,7 +273,8 @@ h1,h2,h3,h4,p,ul {
   &__item {
     &--logo {
       width: 180px;
-      
+      height: 40px;
+      line-height: 40px;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -464,20 +464,21 @@ h1,h2,h3,h4,p,ul {
     position: relative;
     color:@text;
     
-    
     padding-left: 27px;
     padding-right: 15px;
-    
-    margin-right: 15px;
+    margin-right: 14px;
 
     &:after {
-      content: '|';
+      content: '';
       position: absolute;
       right: 0;
       top: 0;
       bottom: 0;
       margin: auto;
       font-weight: 300;
+      width: 1px;
+      height: 14px;
+      background-color: #666666;
     }
 
     &:before {
@@ -604,6 +605,11 @@ h1,h2,h3,h4,p,ul {
   &--sidebar {
     position: fixed;
     border-top: 5px solid #d7e9e8;
+    display: none;
+    
+    @media @mobiles {
+      display: block;
+    }
     .nav__list {
       box-shadow: none;
       position: relative;
@@ -824,20 +830,24 @@ h1,h2,h3,h4,p,ul {
     position: relative;
     display: inline-block;
     padding-right: 15px;
-    margin-right: 15px;
+    margin-right: 14px;
 
     height: 40px;
     line-height: 40px;
     
     z-index: 1;
     &:after {
-      content: '|';
+      content: '';
       position: absolute;
       right: 0;
       top: 0;
       bottom: 0;
       margin: auto;
       font-weight: 300;
+      display: block;
+      width: 1px;
+      height: 14px;
+      background-color: #666666;
     }
 
     &:last-child {
@@ -917,7 +927,6 @@ h1,h2,h3,h4,p,ul {
     width: 100%;
     padding-right: 15px;
     
-    
     transition: background-color 0.3s ease;
     
     svg {
@@ -927,13 +936,16 @@ h1,h2,h3,h4,p,ul {
       margin-right: 10px;
       fill: #333333;
     }
-    
-    &:hover, &--active {
+    &--not-empty {
       background-color: @green;
       color:@white;
-      
       svg {
         fill: @white;
+      }
+    }
+    &:hover {
+      span {
+        text-decoration: underline;
       }
     }
   }
@@ -1201,9 +1213,12 @@ h1,h2,h3,h4,p,ul {
 
   &:hover {
     box-shadow: 0 2px 20px rgba(206, 206, 206, 0.5);
-    transform: scale(1.05);
+    transform:  translateZ(0) scale(1.05);
     .category__img {
         animation-play-state: running;
+    }
+    .category__title {
+      color: @blue;
     }
 
   }
@@ -1213,6 +1228,7 @@ h1,h2,h3,h4,p,ul {
     font-weight: 400;
     margin-bottom: 10px;
     color: @text;
+    transition: color 0.3s ease;
   }
 
   &__desc {
@@ -1540,11 +1556,20 @@ h1,h2,h3,h4,p,ul {
 .product {
   
   
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+  transition: transform 0.3s ease;
   
-  
+  text-decoration: none;
+  cursor: pointer;
   &:hover {
+    transform:  translateZ(0) scale(1.05);
     .product__inner {
       box-shadow: 0 2px 15px rgba(206, 206, 206, 0.5);
+    }
+    .product__title {
+      color: @blue;
     }
   }
   
@@ -1558,6 +1583,7 @@ h1,h2,h3,h4,p,ul {
     box-shadow: 0 2px 10px rgba(206, 206, 206, 0.5);
     padding: 60px 30px 40px 30px; 
     background-color: @white;
+    transition: box-shadow 0.3s ease;
   }
 
   &__image {
@@ -1581,6 +1607,7 @@ h1,h2,h3,h4,p,ul {
 
     text-decoration: none;
     color: @text;
+    transition: color 0.3s ease;
   }
 
   &__price {
@@ -1605,11 +1632,13 @@ h1,h2,h3,h4,p,ul {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url('../img/icon-cart-green.png');
     right: 0;
     bottom: 0;
-
     cursor: pointer;
+
+    svg {
+      fill: @green;
+    }
   }
   
   &__state {
@@ -1790,7 +1819,10 @@ h1,h2,h3,h4,p,ul {
   }
 }
 
+.stars {
+  color: #368879;
 
+}
 .reviews {
   display: flex;
   flex-wrap: wrap;
@@ -3061,6 +3093,10 @@ h1,h2,h3,h4,p,ul {
 
 /* baron overrides */
 .baron {
+  ::-webkit-scrollbar { /* for Mac OS X support */
+      width: 0;
+  }
+
   &__scroller {
     min-width: 100% !important;
   }
@@ -3089,7 +3125,7 @@ h1,h2,h3,h4,p,ul {
 }
 
 .lslide {
-  padding: 15px;
+  padding: 25px 15px;
 }
 
 
