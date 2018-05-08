@@ -134,21 +134,23 @@ $(function (){
     
   });
 
-  $('.gallery').lightSlider({
-      gallery:true,
-      item:1,
-      loop:true,
-      thumbItem:5,
-      slideMargin:0,
-      enableDrag: false,
-      currentPagerPosition:'left',
-      onSliderLoad: function(el) {
-          el.lightGallery({
-              selector: '.gallery .lslide'
-          });
-      }   
-  });  
+  
+  var $product_image = $('.gallery__inner img');
+  $('.gallery__item').click(function(e){
+      console.log('thumb clicked');
+      var target_src = $(this).data('src');
+      
+      $('.gallery__item').removeClass('gallery__item--active');
+      $(this).addClass('gallery__item--active');
+      
+      $product_image.fadeOut('fast', function () {
+          $product_image.attr('src', target_src);
+          $product_image.fadeIn('fast');
+      });
+      return false;
+  });
 
+  
 
   $('.menu__opener').click(function(e){
     $(this).closest('.menu__item').toggleClass('menu__item--opened');
