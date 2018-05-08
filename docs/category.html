@@ -212,7 +212,15 @@
           </li>
           <li class="breadcrumbs__item">Продукты</li>
         </ul>
-        <div class="sort">Сортировать по: новизне</div>
+        <div class="sort">
+          <input type="hidden" class="sort__input">
+          <div class="sort__placeholder">Сортировать по: <span>умолчанию</span></div>
+          <ul class="sort__dropdown">
+            <li class="sort__item" data-sort="price">стоимости</li>
+            <li class="sort__item" data-sort="new">новизне</li>
+            <li class="sort__item" data-sort="hit">популярности</li>
+          </ul>
+        </div>
       </div>
     </div>
     <section class="section section--catalog">

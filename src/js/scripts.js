@@ -134,7 +134,6 @@ $(function (){
     
   });
 
-  
   var $product_image = $('.gallery__inner img');
   $('.gallery__item').click(function(e){
       console.log('thumb clicked');
@@ -150,8 +149,23 @@ $(function (){
       return false;
   });
 
+  /*
+  $('.gallery__gallery').lightSlider({
+      item: 5,
+      loop: false,
+      slideMove: 1,
+      slideMargin: 10,
+      easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+      speed: 600,
+      pager: false,
+      controls: false,
+      enableDrag: false,
+  });  
+  */
   
-
+  $('.sort span').click(function(e){
+    $(this).closest('.sort').toggleClass('sort--active');
+  });
   $('.menu__opener').click(function(e){
     $(this).closest('.menu__item').toggleClass('menu__item--opened');
 
