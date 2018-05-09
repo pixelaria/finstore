@@ -79,10 +79,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -100,10 +101,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -121,10 +123,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -142,10 +145,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -200,7 +204,7 @@
   
 
   </nav>
-  <div class="main" id="panel">
+  <main class="main" id="panel">
     <section class="section section section--params">
       <div class="container">
         <ul class="breadcrumbs">
@@ -233,14 +237,14 @@
           </div>
           <div class="login__info">
             <p class="login__text">Создание учетной записи поможет покупать быстрее, контролировать состояние заказа, а также просматривать заказы сделанные ранее. Постоянным покупателям мы предлагаем персональное обслуживание.</p>
-            <a href="#" class="btn btn--tr">Зарегистрироваться за 2 минуты</a>
+            <a href="#" class="btn btn--tr">Зарегистрироваться <span>за 2 минуты</span></a>
           </div>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Выгодные предложения</h2>
+        <h2 class="section__subtitle">Выгодные предложения</h2>
         <div class="products-slider">
           <div class="products-slider__arrow products-slider__arrow--left"></div>
           <div class="products-slider__slider">
@@ -328,8 +332,6 @@
           <div class="products-slider__arrow products-slider__arrow--right"></div>
         </div>
       </div>
-    </section>
-    <div class="container">
       <h2 class="section__subtitle">Всегда на <span class="stars">★★★★★</span></h2>
       <div class="reviews">
         <div class="reviews__item review">
@@ -369,7 +371,9 @@
           </div>
         </div>
       </div>
-    </div>
+
+    </section>
+    
   </main>
   <footer class="footer">
     <div class="container">

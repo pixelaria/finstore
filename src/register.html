@@ -64,43 +64,94 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title">Выгодные предложения</h2>
-        <div class="products">
-          <div class="products__item product product--sale">
-            <div class="product__image">
-              <img src="./img/product-1.png" alt="" class="img img--auto">
-            </div>
-            <div class="product__desc">
-              <p class="product__title">Авокадо</p>
-              <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
-              <a href="" class="product__cart"></a>
-            </div>
+        <h2 class="section__subtitle">Выгодные предложения</h2>
+        <div class="products-slider">
+          <div class="products-slider__arrow products-slider__arrow--left"></div>
+          <div class="products-slider__slider">
+              <div class="products-slider__products products">
+                <a href="product.html" class="products__item product">
+                  <div class="product__inner">
+                    <div class="product__state product__state--sale">Акция</div>
+                    <div class="product__image">
+                      <img src="./img/product-1.png" alt="" class="img img--auto">
+                    </div>
+                    <div class="product__desc">
+                      <p class="product__title">Авокадо</p>
+                      <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                      <span class="product__cart"><svg><use xlink:href="#icon-shopping-cart"></use></svg></span>
+                    </div>
+                  </div>
+                </a>
+                <a href="product.html" class="products__item product">
+                  <div class="product__inner">
+                    <div class="product__state product__state--sale">Акция</div>
+                    <div class="product__image">
+                      <img src="./img/product-2.png" alt="" class="img img--auto">
+                    </div>
+                    <div class="product__desc">
+                      <p class="product__title">Йогурт с клубникой</p>
+                      <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
+                      <span class="product__cart"><svg><use xlink:href="#icon-shopping-cart"></use></svg></span>
+                    </div>
+                  </div>
+                </a>
+                <a href="product.html" class="products__item product">
+                  <div class="product__inner">
+                    <div class="product__state product__state--sale">Акция</div>
+                    <div class="product__image">
+                      <img src="./img/product-3.png" alt="" class="img img--auto">
+                    </div>
+                    <div class="product__desc">
+                      <p class="product__title">Печенье с клюквой и шоколадом</p>
+                      <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
+                      <span class="product__cart"><svg><use xlink:href="#icon-shopping-cart"></use></svg></span>
+                    </div>
+                  </div>
+                </a>
+                <a href="product.html" class="products__item product">
+                  <div class="product__inner">
+                    <div class="product__state product__state--sale">Акция</div>
+                    <div class="product__image">
+                      <img src="./img/product-1.png" alt="" class="img img--auto">
+                    </div>
+                    <div class="product__desc">
+                      <p class="product__title">Авокадо</p>
+                      <p class="product__price"><span>85,00 Р.</span> 69,50 Р.</p>
+                      <span class="product__cart"><svg><use xlink:href="#icon-shopping-cart"></use></svg></span>
+                    </div>
+                  </div>
+                </a>
+                <a href="product.html" class="products__item product">
+                  <div class="product__inner">
+                    <div class="product__state product__state--sale">Акция</div>
+                    <div class="product__image">
+                      <img src="./img/product-2.png" alt="" class="img img--auto">
+                    </div>
+                    <div class="product__desc">
+                      <p class="product__title">Йогурт с клубникой</p>
+                      <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
+                      <span class="product__cart"><svg><use xlink:href="#icon-shopping-cart"></use></svg></span>
+                    </div>
+                  </div>
+                </a>
+                <a href="product.html" class="products__item product">
+                  <div class="product__inner">
+                    <div class="product__state product__state--sale">Акция</div>
+                    <div class="product__image">
+                      <img src="./img/product-3.png" alt="" class="img img--auto">
+                    </div>
+                    <div class="product__desc">
+                      <p class="product__title">Печенье с клюквой и шоколадом</p>
+                      <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
+                      <span class="product__cart"><svg><use xlink:href="#icon-shopping-cart"></use></svg></span>
+                    </div>
+                  </div>
+                </a>
+              </div>
           </div>
-          <div class="products__item product product--sale">
-            <div class="product__image">
-              <img src="./img/product-2.png" alt="" class="img img--auto">
-            </div>
-            <div class="product__desc">
-              <p class="product__title">Йогурт с клубникой</p>
-              <p class="product__price"><span>57,00 Р.</span> 40,70 Р.</p>
-              <a href="" class="product__cart"></a>
-            </div>
-          </div>
-          <div class="products__item product product--sale">
-            <div class="product__image">
-              <img src="./img/product-3.png" alt="" class="img img--auto">
-            </div>
-            <div class="product__desc">
-              <p class="product__title">Печенье с клюквой и шоколадом</p>
-              <p class="product__price"><span>305,00 Р.</span> 242,00 Р.</p>
-              <a href="" class="product__cart"></a>
-            </div>
-          </div>
+          <div class="products-slider__arrow products-slider__arrow--right"></div>
         </div>
+        @@include('_html/_reviews.html')
       </div>
     </section>
   </main>

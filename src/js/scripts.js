@@ -165,29 +165,35 @@ $(function (){
 
   });
 
-
   $(document).on('click','.spinner__button', function(e){
-    var target = $(this).siblings('.spinner__input--main');
-    var change = 1,min = 1, max=200;
+    var $spinner = $(this).closest('.spinner');
+    var $target = $spinner.find('.spinner__input');
+    var $placeholder = $spinner.find('.spinner__placeholder');
+    console.log($target);
     
-    if (target.data('change') != undefined) change = parseInt(target.data('change'));
-    if (target.data('min') != undefined) min = parseInt(target.data('min'));
-    if (target.data('max') != undefined) max = parseInt(target.data('max'));
+    var change = 1,min = 1, max=200, uom = 'шт.';
+    if ($target.data('change') != undefined) change = parseInt($target.data('change'));
+    if ($target.data('min') != undefined) min = parseInt($target.data('min'));
+    if ($target.data('max') != undefined) max = parseInt($target.data('max'));
+    if ($target.data('uom') != undefined) uom = $target.data('uom');
     
     var val;
     
     if ($(this).hasClass('spinner__button--up')) {
-      val=parseInt(target.val()) + change;
+      val=parseInt($target.val()) + change;
     } else {
-      val=parseInt(target.val()) - change;
+      val=parseInt($target.val()) - change;
     }
     
     if (val<min) val=min;
     if (val>max) val=max;
 
-    $(target).val(val).change();
+    $target.val(val).change();
+    $placeholder.html(val+' '+uom);
+    console.log(val+' '+uom);
     return false;
   });
+
 
   $(document).on('click','.select', function(e){
     $(this).toggleClass('select--opened');
@@ -249,6 +255,28 @@ $(function (){
     }
     
   });
+
+  ymaps.ready(function(){
+    console.log('ymaps ready');
+    
+
+    map = new ymaps.Map("map", {
+        center: [59.853029, 30.233864],
+        zoom: 13,
+    });
+    placemark=new ymaps.Placemark(
+      [59.853029, 30.233864],
+      {
+        balloonContent:"Пункт выдачи заказа",
+        balloonContentHeader:"Пункт выдачи заказа",
+        balloonContentBody:"Пункт выдачи заказа: Санкт-Петербург, Ленинский проспект, д. 110к1"
+      },
+      { 
+        preset:"islands#icon",
+        iconColor:"#0095b6"
+      });
+    map.geoObjects.add(placemark);
+  }); 
 
 
 });

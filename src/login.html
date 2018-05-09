@@ -12,7 +12,7 @@
 </head>
 <body>
   @@include('_html/_header.html')
-  <div class="main" id="panel">
+  <main class="main" id="panel">
     <section class="section section section--params">
       <div class="container">
         <ul class="breadcrumbs">
@@ -45,14 +45,14 @@
           </div>
           <div class="login__info">
             <p class="login__text">Создание учетной записи поможет покупать быстрее, контролировать состояние заказа, а также просматривать заказы сделанные ранее. Постоянным покупателям мы предлагаем персональное обслуживание.</p>
-            <a href="#" class="btn btn--tr">Зарегистрироваться за 2 минуты</a>
+            <a href="#" class="btn btn--tr">Зарегистрироваться <span>за 2 минуты</span></a>
           </div>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Выгодные предложения</h2>
+        <h2 class="section__subtitle">Выгодные предложения</h2>
         <div class="products-slider">
           <div class="products-slider__arrow products-slider__arrow--left"></div>
           <div class="products-slider__slider">
@@ -140,8 +140,9 @@
           <div class="products-slider__arrow products-slider__arrow--right"></div>
         </div>
       </div>
+      @@include('_html/_reviews.html')
     </section>
-    @@include('_html/_reviews.html')
+    
   </main>
   @@include('_html/_footer.html')
 </body>

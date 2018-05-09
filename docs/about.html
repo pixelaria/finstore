@@ -79,10 +79,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -100,10 +101,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -121,10 +123,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -142,10 +145,11 @@
                 </div>
                 <div class="cart__cell">
                   <div class="spinner">
-                    <input type="text" class="spinner__input" value="120 шт.">
+                    <input class="spinner__input" value="120" type="hidden" data-uom="шт.">
+                    <div class="spinner__placeholder"><span class="spinner__value">120</span> <span class="spinner__uom">шт.</span></div>
                     <div class="spinner__buttons">
-                      <span class="spinner__button spinner__button--up"></span>
-                      <span class="spinner__button spinner__button--down"></span>
+                      <span class="spinner__button spinner__button--up"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
+                      <span class="spinner__button spinner__button--down"><svg><use xlink:href="#icon-down-arrow"></use></svg></span>
                     </div>
                   </div>
                 </div>
@@ -220,7 +224,7 @@
           <div class="address__info">
             <div class="address__block address__block--point">
               <p class="address__title">Адрес:</p>
-              <p class="address__text">Санкт-Петербург, Ленинский проспект, д. 11</p>
+              <p class="address__text">Санкт-Петербург, Ленинский проспект, д. 110к1</p>
               <p class="address__text">м. Ленинский проспект</p>
             </div>
             <div class="address__block address__block--phone">
@@ -250,7 +254,7 @@
           </div>
         </div>
         
-        <h2 class="section__title">Всегда на ★★★★★</h2>
+        <h2 class="section__subtitle">Всегда на <span class="stars">★★★★★</span></h2>
         <div class="reviews">
           <div class="reviews__item review">
             <div class="review__photo">
@@ -289,9 +293,11 @@
             </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
+  <script src="https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru_RU" type="text/javascript"></script>
   <footer class="footer">
     <div class="container">
       <div class="footer__info">
