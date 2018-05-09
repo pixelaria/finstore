@@ -86,10 +86,8 @@ $(function (){
 
 
   // Init all product sliders
-  $.each($('.products-slider__products'), function() { 
-    var $prev = $(this).prev();
-    var $next = $(this).next();
-    
+  $.each($('.products-slider__products'), function(e) { 
+    var $parent = $(this).closest('.products-slider');
     var $slider = $(this).lightSlider({
       item: 4,
       loop: false,
@@ -122,16 +120,12 @@ $(function (){
       
     });  
 
-    $prev.click(function(e){
-      console.log('prev');
+    $parent.find(".products-slider__arrow--left").click(function(e){
       $slider.goToPrevSlide(); 
     });
-
-    $next.click(function(e){
-      console.log('next');
+    $parent.find(".products-slider__arrow--right").click(function(e){
       $slider.goToNextSlide(); 
     });
-    
   });
 
   var $product_image = $('.gallery__inner img');
