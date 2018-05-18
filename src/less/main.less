@@ -3308,6 +3308,27 @@ h1,h2,h3,h4,p,ul {
   }
 }
 
+.alert {
+  
+  top: 0;
+  width: 100%;
+  height: 35px;
+  background-image: linear-gradient(to right, #d7e9e8 0%, #afcfce 30%, #297691 60%);
+  z-index: 999;
+  
+  &__text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  &--error {
+    background-image: linear-gradient(to right, #fcfcfc 0%, #e12824 60%, #89141c 100%);
+  }
+}
+
 /* baron overrides */
 .baron {
   ::-webkit-scrollbar { /* for Mac OS X support */
