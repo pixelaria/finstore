@@ -781,6 +781,7 @@ h1,h2,h3,h4,p,ul {
 
     width: 28px;
     height: 28px;
+    border: none;
     svg {
       position: absolute;
       margin: auto;
@@ -1523,6 +1524,21 @@ h1,h2,h3,h4,p,ul {
 
 .catalog {
   margin-bottom: 80px;
+
+  width: 75%;
+  min-width: 75%;
+  
+  @media @tablet {
+    width: 100%;
+    min-width: 10%;
+  }
+  
+  @media @mobiles {
+    width: 100%;
+    min-width: 10%;
+  }
+
+
   &__products {
     display: flex;
     flex-direction: row;
