@@ -75,11 +75,13 @@ $(function (){
   });
 
   slideout.on('beforeopen', function () {
+    $('.alert').addClass('fixed-open');
     header.classList.add('fixed-open');
     footer.classList.add('fixed-open');
   });
 
   slideout.on('beforeclose', function () {
+    $('.alert').removeClass('fixed-open');
     header.classList.remove('fixed-open');
     footer.classList.remove('fixed-open');
   });
