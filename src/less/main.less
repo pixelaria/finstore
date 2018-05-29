@@ -1775,7 +1775,6 @@ h1,h2,h3,h4,p,ul {
       width: 55px;
       height: 55px;
       border-radius: 50%;
-      border: 1px solid #6e6e6e;
       overflow: hidden;
       left: 0;
       top: 0;
@@ -1784,6 +1783,23 @@ h1,h2,h3,h4,p,ul {
       background-position: center;
     }
     
+    &--rocket {
+      &:before {
+        background-image: url('../img/advantages-rocket.png'); 
+      }
+    }
+
+    &--stock {
+      &:before {
+        background-image: url('../img/advantages-stock.png');
+      }
+    }
+
+    &--sale {
+      &:before {
+        background-image: url('../img/advantages-sale.png');
+      }
+    }
     @media @tablet {
       padding-left: 60px;
       &:before {
