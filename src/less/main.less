@@ -960,15 +960,9 @@ h1,h2,h3,h4,p,ul {
   
 
   &__products {
-    height: 260px;
-
     .baron__scroller {
       
-      
-
     }
-    
-    
   }
   &__row {
     display: flex;
@@ -982,19 +976,30 @@ h1,h2,h3,h4,p,ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    
     align-items: center;
     align-content: center;
 
     &--img {
-
+      width: 50px;
+      min-width: 50px;
     }
 
     &--product {
-     
+      width: 180px;
+      min-width: 180px;
+      justify-content: flex-start;
     }
-
+  
+    &--quantity {
+      width: 85px;
+      min-width: 85px;
+    }
     
+    &--price {
+      width: 50px;
+      min-width: 50px;
+    }
 
 
   }
