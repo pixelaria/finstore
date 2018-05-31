@@ -30,6 +30,15 @@ $(function (){
     $('.search').toggleClass('search--active');
   });
 
+  $('.alert__closer').click(function(e){
+    var $alert = $(this).closest('.alert');
+    $alert.removeClass('alert--active');
+    setTimeout(function() {
+      $alert.remove()
+    }, 350);
+  });
+  
+
   $('.radioblock__item').click(function(e){
     var value = $(this).data('value');
     var parent = $(this).parent();
