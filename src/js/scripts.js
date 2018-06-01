@@ -4,11 +4,29 @@ $(function (){
   console.log('init');
 
   $('.cart__toggler').click(function(e){
+    e.stopPropagation();
     e.preventDefault();
-    $(this).toggleClass('cart__toggler--active');
     $('.toolbar').toggleClass('toolbar--active');
     $('.cart').toggleClass('cart--active');
   });
+
+  $('.cart__closer').click(function(e){
+    hideCart();
+    return false;
+  });
+  
+  $('.cart__toggler').click(function(e){ 
+    e.stopPropagation();
+  });
+
+  $(window).click(function() {
+    hideCart();
+  });
+
+  function hideCart() {
+    $('.cart').removeClass('cart--active');
+    $('.toolbar').removeClass('toolbar--active');
+  }
 
   $('.product__cart').click(function(e){
     e.preventDefault();
@@ -157,6 +175,7 @@ $(function (){
   });
 
   $(document).on('click','.spinner__button', function(e){
+    console.log('.spinner__button');
     var $spinner = $(this).closest('.spinner');
     var $target = $spinner.find('.spinner__input');
     var $placeholder = $spinner.find('.spinner__placeholder');
@@ -180,6 +199,7 @@ $(function (){
     if (val>max) val=max;
 
     $target.val(val).change();
+    $target.trigger('change');
     $placeholder.html(val+' '+uom);
     console.log(val+' '+uom);
     return false;
@@ -229,7 +249,7 @@ $(function (){
   });
 
   
-  if (ymaps!=undefined) {
+  if ($('#map').length) {
     ymaps.ready(function(){
       console.log('ymaps ready');
       
@@ -252,11 +272,4 @@ $(function (){
       map.geoObjects.add(placemark);
     }); 
   }
-  
-  
-  
-
-
-  
-
 });
