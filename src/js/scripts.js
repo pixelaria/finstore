@@ -15,14 +15,15 @@ $(function (){
     return false;
   });
   
-  $('.cart__toggler').click(function(e){ 
-    e.stopPropagation();
-  });
-
-  $(window).click(function() {
+  // If an event gets to the body
+  $("body").click(function(){
     hideCart();
   });
 
+  $('.cart').click(function(e){ 
+    e.stopPropagation();
+  });
+ 
   function hideCart() {
     $('.cart').removeClass('cart--active');
     $('.toolbar').removeClass('toolbar--active');
@@ -220,10 +221,7 @@ $(function (){
     select.find('.select__placeholder').html(text);
     select.removeClass('select--opened');
     return false;
-  });
-
-
-  
+  });  
 
   $('.im--phone').mask('+7 (000) 000-00-00');
 
@@ -247,7 +245,6 @@ $(function (){
     }
     
   });
-
   
   if ($('#map').length) {
     ymaps.ready(function(){

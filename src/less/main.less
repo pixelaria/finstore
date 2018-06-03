@@ -931,6 +931,7 @@ h1,h2,h3,h4,p,ul {
   
 
   &__products {
+    padding-top: 15px;
   }
   &__row {
     display: flex;
@@ -3080,7 +3081,11 @@ h1,h2,h3,h4,p,ul {
     box-shadow: inset 0 1px 10px rgba(187, 187, 187, 0.3);
     border-radius: 8px;
     border: 1px solid #e7e7e7;
-
+    
+    &--half {
+       width:32%;
+       min-width: 32%;
+    }
     @media @mobiles {
       width: 60%;
       min-width: 60%;
