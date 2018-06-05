@@ -113,14 +113,20 @@ $(function (){
   // Init all product sliders
   $.each($('.products-slider__products'), function(e) { 
     var $parent = $(this).closest('.products-slider');
+    var _item = $(this).data('item'),
+        _pager = $(this).data('pager');
+    
+    if (_item==undefined) _item=4;
+    if (_pager==undefined) _pager=false;
+
     var $slider = $(this).lightSlider({
-      item: 4,
+      item: _item,
       loop: false,
       slideMove: 1,
       slideMargin: 0,
       easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
       speed: 600,
-      pager: false,
+      pager: _pager,
       controls: false,
       enableDrag: false,
 
