@@ -185,9 +185,11 @@ $(function (){
 
   $(document).on('click','.spinner__button', function(e){
     console.log('.spinner__button');
+
     var $spinner = $(this).closest('.spinner');
     var $target = $spinner.find('.spinner__input');
     var $placeholder = $spinner.find('.spinner__placeholder');
+    
     console.log($target);
     
     var change = 1,min = 1, max=200, uom = 'шт.';
@@ -208,7 +210,7 @@ $(function (){
     if (val>max) val=max;
 
     $target.val(val).change();
-    $target.trigger('change');
+    //$target.trigger('change');
     $placeholder.html(val+' '+uom);
     console.log(val+' '+uom);
     return false;
