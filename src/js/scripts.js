@@ -53,9 +53,9 @@ $(function (){
 
   $('.radioblock__item').click(function(e){
     var value = $(this).data('value');
-    var $parent = $(this).parent();
-    var $input = $parent.find('.radioblock__input');
-    $parent.find('.radioblock__item').removeClass('radioblock__item--active');
+    var $radioblock = $(this).closest('.radioblock');
+    var $input = $radioblock.find('.radioblock__input');
+    $radioblock.find('.radioblock__item').removeClass('radioblock__item--active');
     $input.val(value);
     $input.trigger('change');
     $(this).addClass('radioblock__item--active');
