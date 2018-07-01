@@ -1491,6 +1491,12 @@ h1,h2,h3,h4,p,ul {
     padding: 15px 10px;
 
     &--opened {
+      & > .menu__link {
+        font-weight: 700;
+        color: @green;
+      }
+
+
       .menu__opener {
         transform: rotateZ(180deg);
         svg {
@@ -1519,13 +1525,8 @@ h1,h2,h3,h4,p,ul {
     border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
 
-    &:hover {
+    &:hover, &--active {
       color: @green;
-      //border-color: @green;
-    }
-
-    &--active {
-      font-weight: 700;
     }
   }
 
@@ -1570,10 +1571,8 @@ h1,h2,h3,h4,p,ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: stretch;
     align-content: stretch;
-
     margin-bottom: 15px;
   }
 
@@ -1596,20 +1595,29 @@ h1,h2,h3,h4,p,ul {
     width: 31%;
     min-width: 31%;
     margin-bottom: 3.5%;
+    margin-right: 3.5%;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
 
     @media @tablet {
       width: 48.25%;
       min-width: 48.25%;
       margin-bottom: 3.5%;
+      margin-right: 3.5%;
     }
+
     @media @mobile {
       width: 48.25%;
       min-width: 48.25%;
       margin-bottom: 3.5%;
+      margin-right: 3.5%; 
     }
 
     @media @mobile-xs {
       width: 100%;
+      margin-right: 0;
     }
   }
 }
