@@ -38,6 +38,29 @@ $(function (){
     $('.search').toggleClass('search--active');
   });
 
+  $('.search__input').on('keydown', function(e) {
+    if (e.keyCode == 13) {
+      
+      var url = $('base').attr('href') + 'index.php?route=product/search';
+      var value = $(this).val();
+      if (value) {
+        url += '&search=' + encodeURIComponent(value);
+      }
+      location = url;
+    }
+  });
+
+  $('.search__btn').on('click', function(e) {
+    var $input = $(this).siblings('.search__input');  
+    var url = $('base').attr('href') + 'index.php?route=product/search';
+    var value = $input.val();
+    if (value) {
+      url += '&search=' + encodeURIComponent(value);
+    }
+    location = url;
+    
+  });
+
   $(document).on('click', '.alert__closer', function(e){
     var $alert = $(this).closest('.alert');
     
@@ -59,6 +82,20 @@ $(function (){
     $input.val(value);
     $input.trigger('change');
     $(this).addClass('radioblock__item--active');
+  });
+
+  $('.checkbox__toggler').click(function(e){
+    var $checkbox = $(this).closest('.checkbox');
+    var $input = $checkbox.find('.checkbox__input');
+    var active = $(this).hasClass('checkbox__toggler--active');
+    if (active) {
+      $(this).removeClass('checkbox__toggler--active');
+      $input.val(0);
+    } else {
+      $(this).addClass('checkbox__toggler--active');
+      $input.val(1);
+    }
+    $input.trigger('change');
   });
   
   $('.nav__toggler').click(function(e){
