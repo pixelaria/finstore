@@ -2295,7 +2295,28 @@ h1,h2,h3,h4,p,ul {
     }
   }
 }
-
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+  li {
+    margin-right: 15px;
+    color: #297691;
+    a {
+      color: #297691;
+      text-decoration: none;
+    }
+    &.active, &:hover {
+      color: #368879;
+      a {
+        color: #368879;
+      }
+    }
+  }
+}
 .product-page {
   width: 75%;
   min-width: 75%;
